@@ -10,10 +10,10 @@
         <source :src="src" type="video/mp4">
         Ihr Browser unterstützt das Video-Tag nicht.
       </video>
-      <button v-if="isMuted" @click="unmute" class="unmute-button">Unmute</button>
+      <img v-if="isMuted" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
       <div class="video-description" :class="{'fade-in-delay': isLeft || !isLeft}">{{ description }}</div>
-
     </div>
+
   </div>
 </template>
 
@@ -24,22 +24,32 @@ export default {
     return {
       timeout: null,
       isExpanded: false,
-      isMuted: true
+      isMuted: true,
+      isAnimating: true,
     };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isAnimating = false;
+    }, 2000);
   },
   methods: {
     mouseOver() {
-      this.isExpanded = true;
-      this.timeout = setTimeout(() => {
-        this.$refs.video.play().catch(error => {
-          console.error('Fehler beim Abspielen des Videos:', error);
-        });
-      }, 1);
+      if (!this.isAnimating) { 
+        this.isExpanded = true;
+        this.timeout = setTimeout(() => {
+          this.$refs.video.play().catch(error => {
+            console.error('Fehler beim Abspielen des Videos:', error);
+          });
+        }, 1);
+      }
     },
     mouseLeave() {
-      this.isExpanded = false;
-      clearTimeout(this.timeout);
-      this.$refs.video.pause();
+      if (!this.isAnimating) {
+        this.isExpanded = false;
+        clearTimeout(this.timeout);
+        this.$refs.video.pause();
+      }
     },
     unmute() {
       this.$refs.video.muted = false;
@@ -53,7 +63,7 @@ export default {
   .project-container {
     position: relative; 
     width: 40%;
-    aspect-ratio: 19 / 9;
+    aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
   }
@@ -62,20 +72,35 @@ export default {
     width: 60%;
   }
 
+  .project-container.animating {
+    animation: none !important; 
+    /* Verhindert, dass die .expanded Klasse während der Animation wirksam wird */
+  }
+
+  .project-container.expanded:not(.animating) {
+    width: 60%; 
+    /*Stellt sicher, dass die .expanded Klasse nur wirksam wird, wenn die Animation abgeschlossen ist */
+  }
+
   .project-content {
+    display: flex; 
+    flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: auto; 
+    align-items: center;
   }
 
   .unmute-button {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    width: 50px;
+    height: 50px;
+    top: calc(45% - 25px);
+    left: calc(50% - 25px);
   }
 
   .project-content video {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9; 
   }
 
   .video-description {
@@ -84,6 +109,7 @@ export default {
     color: black;
     opacity: 0;
     transition: opacity 2s;
+    align-self: flex-start;
   }
 
   .fade-in-delay {

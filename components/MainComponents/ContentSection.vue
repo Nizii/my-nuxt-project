@@ -6,6 +6,7 @@
       src="/videos/Bildarchiv.mp4" 
       description="Dies ist eine Beschreibung des Videos."  
     />
+    <Spacer/>
 
     <VideoComponent 
       class="project"
@@ -17,17 +18,19 @@
 </template>
 
 <script>
-import VideoComponent from './VideoComponent.vue'
+import VideoComponent from '../Content/VideoComponent.vue'
+import Spacer from '../Content/Spacer.vue'
 
 export default {
   components: {
-    VideoComponent
+    VideoComponent,
+    Spacer,
   }
 }
 </script>
 
 <style>
-  .project{
-    margin-bottom: 50px;
+  .spacer{
+    height: 100px;
   }
 </style>
