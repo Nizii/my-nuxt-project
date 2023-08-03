@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderSection/>
-    <DescriptionSection/>
+    <!--<DescriptionSection/>-->
     <ContentSection/>
     <BottomSection/>
   </div>
