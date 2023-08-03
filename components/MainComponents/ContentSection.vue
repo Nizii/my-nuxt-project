@@ -14,28 +14,28 @@
       src="/videos/Wine.mp4" 
       description="Eine interaktive Weinkarte für Personen, die weniger Weinkenntnisse haben, und für Restaurants, die sich keinen Sommelier leisten können, aber dennoch ein Weinerlebnis anbieten möchten, befindet sich im Entwicklungsprozess. Das Team bestand aus mir und einem Designer. Das Frontend wurde mit Nuxt.js entwickelt, das Backend mit .Net. Zudem habe ich mit JWT Tokens gearbeitet."
     />
-
+    <Spacer/>
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Erp.mp4" 
       description="Ein ERP-System für einen Einmann-Sanitärbetrieb befindet sich noch in der Entwicklung. Ich arbeite alleine daran. Das Frontend habe ich mit Vue.js und das Backend mit .Net entwickelt. Als Datenbank verwende ich MySQL."
     />
-
+    <Spacer/>
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Supersonic.mp4" 
       description="Supersonic ist ein Rennspiel, bei dem sich zwei Spieler duellieren. Einerseits steuert ein Spieler das Raumschiff und andererseits ist der Streckenbauer, der versucht, das Raumschiff durch Kurven zu zerstören. Das Entwicklerteam bestand aus 3 Informatikern und einem Designer. Ich war für die Physik verantwortlich. Das Spiel wurde mit Unity und C# entwickelt."
     />
-
+    <Spacer/>
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Flametrain.mp4" 
       description="Eine Art Snake-Spiel, bei dem sich der Ballon nicht verlängert. Das Entwicklerteam bestand aus zwei Informatikern und einem Designer. Ich war für die Gamelogik verantwortlich. Wir haben das Spiel mit C# und Unity entwickelt."
     />
-
+    <Spacer/>
     <VideoComponent 
       class="project"
       :is-left="false" 
