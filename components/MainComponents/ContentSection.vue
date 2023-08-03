@@ -4,7 +4,7 @@
       class="project"
       :is-left="true" 
       src="/videos/Bildarchiv.mp4" 
-      description="Onlineausstellung für das Ringier Bildarchiv Aarau während dem Lockdown. Ich habe das Backend mit .Net erstellt und mit Azure. Die Datenbank war MongoDB. Wir waren 2 Designer und 2 Informatiker Frontend und Backend."  
+      description="Onlineausstellung für das Ringier Bildarchiv Aarau während dem Lockdown. Ich habe das Backend mit .Net erstellt und mit Azure. Die Datenbank war MongoDB. Wir waren 2 Designer und 2 Informatiker (Frontend und Backend)."  
     />
     <Spacer/>
 
@@ -12,35 +12,35 @@
       class="project"
       :is-left="false" 
       src="/videos/Wine.mp4" 
-      description="Eine interaktive Weinkarte für Personen die weniger Weinkentnisse haben und Restaurants die sich keinen Someilier Leisten können aber trotzdem ein Weinerlebniss anbieten möchten. Das Team bestand aus mir und einem Designer. Das Frontend habe ich mit Nuxt.js gemacht und das Backend mit .Net. Zudem habe ich mit JWT Tokens gearbeitet."
+      description="Eine interaktive Weinkarte für Personen, die weniger Weinkenntnisse haben, und für Restaurants, die sich keinen Sommelier leisten können, aber dennoch ein Weinerlebnis anbieten möchten, befindet sich im Entwicklungsprozess. Das Team bestand aus mir und einem Designer. Das Frontend wurde mit Nuxt.js entwickelt, das Backend mit .Net. Zudem habe ich mit JWT Tokens gearbeitet."
     />
 
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Erp.mp4" 
-      description="Ein ERP System für einen Einmannsanitärbetrieb. Das System ist noch in der Entwicklung. Einzelarbeit. Das Frontend habe ich mit Vue.js und das Backend mit .Net gemacht. Die Datenbank ist MySQL."
+      description="Ein ERP-System für einen Einmann-Sanitärbetrieb befindet sich noch in der Entwicklung. Ich arbeite alleine daran. Das Frontend habe ich mit Vue.js und das Backend mit .Net entwickelt. Als Datenbank verwende ich MySQL."
     />
 
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Supersonic.mp4" 
-      description="Supersonic ist ein Rennspiel wo sich zwei Spieler duelieren. Einerseits das Raumschiff und anderseits der Streckenbauer der versucht das Raumschiff durch Kurven zu zerstören. Das Team bestand aus 3 Informatiker und einem Designer. Ich war verantwortlich für die Physik. Wir haben mit Unity und C# gearbeitet"
+      description="Supersonic ist ein Rennspiel, bei dem sich zwei Spieler duellieren. Einerseits steuert ein Spieler das Raumschiff und andererseits ist der Streckenbauer, der versucht, das Raumschiff durch Kurven zu zerstören. Das Entwicklerteam bestand aus 3 Informatikern und einem Designer. Ich war für die Physik verantwortlich. Das Spiel wurde mit Unity und C# entwickelt."
     />
 
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Flametrain.mp4" 
-      description="Eine Art Snake ohne das sich der Ballon verlängert. Team zwei Informatiker und ein Designer. Ich war für die Gamelogik verantwortlich. Hier haben wir mit C# und Unity gearbeitet."
+      description="Eine Art Snake-Spiel, bei dem sich der Ballon nicht verlängert. Das Entwicklerteam bestand aus zwei Informatikern und einem Designer. Ich war für die Gamelogik verantwortlich. Wir haben das Spiel mit C# und Unity entwickelt."
     />
 
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Shield.mp4" 
-      description="Shield Heroe ein VR Spiel wo man die Gegner mit Schildern besiegt. Dabei können die Schilder wie ein Bumerang geworfen werden oder die Geschosse der Gegner werden reflektiert. Wir waren ein dreier Team von Informatiker. Ich war verantwortlich für die Wurf- und Abwerbewegung der Schilder."
+      description="Shield Heroe ist ein VR-Spiel, bei dem man die Gegner mit Schildern besiegt. Dabei können die Schilder wie Bumerangs geworfen werden oder die Geschosse der Gegner werden reflektiert. Das Entwicklerteam bestand aus drei Informatikern. Ich war für die Wurf- und Abwerbewegung der Schilder verantwortlich."
     />
   </div>
 </template>
