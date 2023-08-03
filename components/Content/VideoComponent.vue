@@ -6,7 +6,6 @@
     :class="{'expanded': isExpanded}"
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
-      <div class="video-title" :class="{'fade-in-delay': isLeft || !isLeft}">{{ title }}</div>
       <video ref="video" muted>
         <source :src="src" type="video/mp4">
         Ihr Browser unterstützt das Video-Tag nicht.
