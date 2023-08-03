@@ -11,7 +11,35 @@
     <VideoComponent 
       class="project"
       :is-left="false" 
+      src="/videos/Wine.mp4" 
+      description="Dies ist eine Beschreibung des Videos."
+    />
+
+    <VideoComponent 
+      class="project"
+      :is-left="false" 
+      src="/videos/Erp.mp4" 
+      description="Dies ist eine Beschreibung des Videos."
+    />
+
+    <VideoComponent 
+      class="project"
+      :is-left="false" 
       src="/videos/Supersonic.mp4" 
+      description="Dies ist eine Beschreibung des Videos."
+    />
+
+    <VideoComponent 
+      class="project"
+      :is-left="false" 
+      src="/videos/Flametrain.mp4" 
+      description="Dies ist eine Beschreibung des Videos."
+    />
+
+    <VideoComponent 
+      class="project"
+      :is-left="false" 
+      src="/videos/Shield.mp4" 
       description="Dies ist eine Beschreibung des Videos."
     />
   </div>
