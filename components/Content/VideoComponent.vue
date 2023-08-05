@@ -7,15 +7,18 @@
     :class="{'expanded': isMobile ? false : isExpanded}"
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
-      <video ref="video" muted>
-        <source :src="src" type="video/mp4">
-        Ihr Browser unterstützt das Video-Tag nicht.
-      </video>
-      <img v-if="isMuted" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
+      <div class="video-wrapper">
+        <video ref="video" muted>
+          <source :src="src" type="video/mp4">
+          Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+        <img v-if="isMuted" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
+      </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -106,12 +109,24 @@ export default {
     align-items: center;
   }
 
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; 
+  }
+  
+  .video-wrapper video {
+    width: 100%;
+    height: 100%;
+  }
+
   .unmute-button {
     position: absolute;
     width: 50px;
     height: 50px;
-    top: calc(45% - 25px);
-    left: calc(50% - 25px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .project-content video {
