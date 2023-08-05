@@ -25,7 +25,7 @@ export default {
     font-size: 120px;
     font-weight: bold;
     font-family: sans-serif;
-    margin: 10% 0; /* adjust margin as needed */
+    margin: 10% 0;
   }
 
   .title-desc{
@@ -33,18 +33,18 @@ export default {
     font-size: 60px;
     font-weight: bold;
     font-family: sans-serif;
-    margin: 5% 0; /* adjust margin as needed */
+    margin: 5% 0;
   }
 
   @media only screen and (max-width: 600px) {
     .title-name{
-      font-size: 60px; /* adjust font size for mobile */
-      margin: 5% 0; /* adjust margin for mobile */
+      font-size: 60px;
+      margin: 5% 0;
     }
 
     .title-desc{
-      font-size: 30px; /* adjust font size for mobile */
-      margin: 2.5% 0; /* adjust margin for mobile */
+      font-size: 30px;
+      margin: 2.5% 0;
     }
   }
 </style>
