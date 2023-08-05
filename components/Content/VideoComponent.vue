@@ -60,6 +60,15 @@ export default {
 </script>
 
 <style>
+
+  @media only screen and (max-width: 600px) {
+    .project-container {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
   .project-container {
     position: relative; 
     width: 40%;
@@ -69,7 +78,7 @@ export default {
   }
 
   .project-container.expanded {
-    width: 60%;
+    width: 100%;
   }
 
   .project-container.animating {
