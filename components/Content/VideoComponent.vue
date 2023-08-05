@@ -12,7 +12,7 @@
         Ihr Browser unterstützt das Video-Tag nicht.
       </video>
       <img v-if="isMuted" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
-      <div class="video-description" :class="{'fade-in-delay': isLeft || !isLeft}">{{ description }}</div>
+      <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
   </div>
 </template>
@@ -80,14 +80,14 @@ export default {
 <style>
   .project-container {
     position: relative; 
-    width: 40%;
+    width: 50%;
     aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
   }
 
   .project-container.expanded {
-    width: 60%;
+    width: 50%;
   }
 
   .project-container.animating {
@@ -95,7 +95,7 @@ export default {
   }
 
   .project-container.expanded:not(.animating) {
-    width: 60%;
+    width: 50%;
   }
 
   .project-content {
@@ -118,7 +118,6 @@ export default {
     width: 100%;
     aspect-ratio: 16 / 9; 
   }
-
   .video-description {
     width: 100%;
     padding: 10px;
@@ -126,6 +125,10 @@ export default {
     opacity: 0;
     transition: opacity 2s;
     align-self: flex-start;
+  }
+
+  .fade-in {
+    opacity: 1;
   }
 
   .fade-in-delay {

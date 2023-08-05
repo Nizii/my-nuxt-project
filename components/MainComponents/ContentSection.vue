@@ -59,6 +59,6 @@ export default {
 
 <style>
   .spacer{
-    height: 100px;
+    height: 200px;
   }
 </style>
