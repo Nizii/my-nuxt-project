@@ -1,0 +1,3 @@
+Onlineausstellung für das Stadtmuseum Aarau während dem Lockdown. 
+Ich habe das Backend mit .Net erstellt und mit Azure. Die Datenbank war MongoDB. 
+Wir waren 2 Designer und 2 Informatiker (Frontend und Backend).

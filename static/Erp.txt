@@ -1,0 +1,4 @@
+Ein ERP-System für einen Einmann-Sanitärbetrieb befindet sich noch in der Entwicklung. 
+Ich arbeite alleine daran. 
+Das Frontend habe ich mit Vue.js und das Backend mit .Net entwickelt. 
+Als Datenbank verwende ich MySQL.

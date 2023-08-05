@@ -1,0 +1,5 @@
+Supersonic ist ein Rennspiel, bei dem sich zwei Spieler duellieren. 
+Einerseits steuert ein Spieler das Raumschiff und andererseits ist der Streckenbauer, 
+der versucht, das Raumschiff durch Kurven zu zerstören. 
+Das Entwicklerteam bestand aus 3 Informatikern und einem Designer. 
+Ich war für die Physik verantwortlich. Das Spiel wurde mit Unity und C# entwickelt.

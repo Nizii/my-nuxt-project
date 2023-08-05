@@ -1,0 +1,5 @@
+Eine interaktive Weinkarte für Personen, die weniger Weinkenntnisse haben, 
+und für Restaurants, die sich keinen Sommelier leisten können, 
+aber dennoch ein Weinerlebnis anbieten möchten. Das Team bestand aus mir und einem Designer. 
+Das Frontend wurde mit Nuxt.js entwickelt, das Backend mit .Net. 
+Zudem habe ich mit JWT Tokens und BCrypt gearbeitet.

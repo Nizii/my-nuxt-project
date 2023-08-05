@@ -1,0 +1,4 @@
+Shield Heroe ist ein VR-Spiel, bei dem man die Gegner mit Schildern besiegt. 
+Dabei können die Schilder wie Bumerangs geworfen werden oder die Geschosse der Gegner werden reflektiert. 
+Das Entwicklerteam bestand aus drei Informatikern. 
+Ich war für die Wurf- und Abwerbewegung der Schilder verantwortlich.
