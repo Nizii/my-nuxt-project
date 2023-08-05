@@ -38,11 +38,16 @@ export default {
         this.isAnimating = false;
       }, 2000);
     }
+    this.$root.$on('videoPlaying', this.pauseVideo);
+  },
+  beforeDestroy() {
+    this.$root.$off('videoPlaying', this.pauseVideo);
   },
   methods: {
     toggleVideo() {
       if (this.isMobile) {
         if (this.$refs.video.paused) {
+          this.$root.$emit('videoPlaying');
           this.$refs.video.play().catch(error => {
             console.error('Fehler beim Abspielen des Videos:', error);
           });
@@ -58,6 +63,7 @@ export default {
       if (!this.isAnimating && !this.isMobile) { 
         this.isExpanded = true;
         this.timeout = setTimeout(() => {
+          this.$root.$emit('videoPlaying');
           this.$refs.video.play().catch(error => {
             console.error('Fehler beim Abspielen des Videos:', error);
           });
@@ -76,8 +82,12 @@ export default {
       this.$refs.video.muted = false;
       this.isMuted = false;
     },
+    pauseVideo() {
+      this.$refs.video.pause();
+    }
   },
 }
+
 </script>
 
 <style>
