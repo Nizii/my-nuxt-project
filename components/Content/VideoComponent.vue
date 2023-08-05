@@ -3,7 +3,7 @@
     class="project-container" 
     @mouseover="mouseOver" 
     @mouseleave="mouseLeave"
-    :class="{'expanded': isExpanded}"
+    :class="{'expanded': isMobile ? false : isExpanded}"
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
       <video ref="video" muted>
@@ -13,7 +13,6 @@
       <img v-if="isMuted" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
       <div class="video-description" :class="{'fade-in-delay': isLeft || !isLeft}">{{ description }}</div>
     </div>
-
   </div>
 </template>
 
@@ -26,16 +25,19 @@ export default {
       isExpanded: false,
       isMuted: true,
       isAnimating: true,
+      isMobile: window.innerWidth <= 600,
     };
   },
   mounted() {
-    setTimeout(() => {
-      this.isAnimating = false;
-    }, 2000);
+    if (!this.isMobile) {
+      setTimeout(() => {
+        this.isAnimating = false;
+      }, 2000);
+    }
   },
   methods: {
     mouseOver() {
-      if (!this.isAnimating) { 
+      if (!this.isAnimating && !this.isMobile) { 
         this.isExpanded = true;
         this.timeout = setTimeout(() => {
           this.$refs.video.play().catch(error => {
@@ -45,7 +47,7 @@ export default {
       }
     },
     mouseLeave() {
-      if (!this.isAnimating) {
+      if (!this.isAnimating && !this.isMobile) {
         this.isExpanded = false;
         clearTimeout(this.timeout);
         this.$refs.video.pause();
@@ -73,13 +75,11 @@ export default {
   }
 
   .project-container.animating {
-    animation: none !important; 
-    /* Verhindert, dass die .expanded Klasse während der Animation wirksam wird */
+    animation: none !important;
   }
 
   .project-container.expanded:not(.animating) {
-    width: 60%; 
-    /*Stellt sicher, dass die .expanded Klasse nur wirksam wird, wenn die Animation abgeschlossen ist */
+    width: 60%;
   }
 
   .project-content {
@@ -117,37 +117,34 @@ export default {
     animation-delay: 2s;
   }
 
-  @keyframes fadeIn {
-    to {
-      opacity: 1;
-    }
-  }
-
-  .slide-from-left {
+  .slide-from-left,
+  .slide-from-right {
     animation: slideFromLeft 2s forwards;
   }
 
-  .slide-from-right {
-    animation: slideFromRight 2s forwards;
-  }
-
-  @keyframes slideFromLeft {
-    0% {
-      transform: translateX(-200%);
-      opacity: 0;
+  @media only screen and (max-width: 600px) {
+    .project-container,
+    .project-container.expanded {
+      width: 100%;
     }
-    100% {
-      transform: translateX(0%);
+
+    .project-content {
+      flex-direction: column;
+    }
+
+    .project-content video {
+      aspect-ratio: auto;
+    }
+
+    .video-description {
+      width: 100%;
+      transition: none;
       opacity: 1;
     }
-  }
-  
-  @keyframes slideFromRight {
-    0% {
-      transform: translateX(200%);
-      opacity: 0;
-    }
-    100% {
+
+    .slide-from-left,
+    .slide-from-right {
+      animation: none;
       transform: translateX(0%);
       opacity: 1;
     }
