@@ -25,17 +25,39 @@ export default {
       timeout: null,
       isExpanded: false,
       isMuted: true,
-      isAnimating: true,
+      isAnimating: !this.isMobile,
     };
   },
+  computed: {
+    isMobile() {
+      // 600px ist der Breakpoint für mobile Geräte
+      return window.innerWidth <= 600;
+    },
+  },
+  watch: {
+    isMobile(value) {
+      if (value) {
+        this.isAnimating = false;
+      } else {
+        this.isAnimating = true;
+      }
+    },
+  },
   mounted() {
-    setTimeout(() => {
-      this.isAnimating = false;
-    }, 2000);
+    if (!this.isMobile) {
+      setTimeout(() => {
+        this.isAnimating = false;
+      }, 2000);
+    }
+    // Hinzufügen eines EventListeners, um die Fenstergröße zu überwachen
+    window.addEventListener("resize", () => {
+      this.isMobile = window.innerWidth <= 600;
+    });
   },
   methods: {
+    // Update the mouseOver and mouseLeave methods
     mouseOver() {
-      if (!this.isAnimating) { 
+      if (!this.isAnimating && !this.isMobile) {
         this.isExpanded = true;
         this.timeout = setTimeout(() => {
           this.$refs.video.play().catch(error => {
@@ -45,7 +67,7 @@ export default {
       }
     },
     mouseLeave() {
-      if (!this.isAnimating) {
+      if (!this.isAnimating && !this.isMobile) {
         this.isExpanded = false;
         clearTimeout(this.timeout);
         this.$refs.video.pause();
@@ -56,18 +78,50 @@ export default {
       this.isMuted = false;
     }
   },
+  // Don't forget to remove the event listener
+  beforeDestroy() {
+    window.removeEventListener("resize", () => {
+      this.isMobile = window.innerWidth <= 600;
+    });
+  },
 }
+
 </script>
 
 <style>
 
-  @media only screen and (max-width: 600px) {
-    .project-container {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-    }
+@media only screen and (max-width: 600px) {
+  .project-container {
+    width: 100%;
+    margin: 0;
+    transition: none;
   }
+
+  .project-container.expanded {
+    width: 100%;
+  }
+
+  .project-content {
+    flex-direction: column;
+  }
+
+  .project-content video {
+    aspect-ratio: auto;
+  }
+
+  .video-description {
+    width: 100%;
+    transition: none;
+    opacity: 1;
+  }
+
+  .slide-from-left,
+  .slide-from-right {
+    animation: none;
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 
   .project-container {
     position: relative; 
@@ -78,7 +132,7 @@ export default {
   }
 
   .project-container.expanded {
-    width: 100%;
+    width: 60%;
   }
 
   .project-container.animating {
