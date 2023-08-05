@@ -1,6 +1,7 @@
 <template>
   <div 
     class="project-container" 
+    @click="toggleVideo"
     @mouseover="mouseOver" 
     @mouseleave="mouseLeave"
     :class="{'expanded': isMobile ? false : isExpanded}"
@@ -36,6 +37,20 @@ export default {
     }
   },
   methods: {
+    toggleVideo() {
+      if (this.isMobile) {
+        if (this.$refs.video.paused) {
+          this.$refs.video.play().catch(error => {
+            console.error('Fehler beim Abspielen des Videos:', error);
+          });
+        } else {
+          this.$refs.video.pause();
+        }
+      }
+      else {
+        this.mouseOver();
+      }
+    },
     mouseOver() {
       if (!this.isAnimating && !this.isMobile) { 
         this.isExpanded = true;
@@ -53,10 +68,11 @@ export default {
         this.$refs.video.pause();
       }
     },
-    unmute() {
+    unmute(event) {
+      event.stopPropagation();
       this.$refs.video.muted = false;
       this.isMuted = false;
-    }
+    },
   },
 }
 </script>
