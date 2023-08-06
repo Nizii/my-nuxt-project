@@ -2,11 +2,10 @@
   <div 
     class="project-container" 
     @click="toggleVideo"
-    @mouseover="mouseOver" 
-    @mouseleave="mouseLeave"
     :class="{'expanded': isMobile ? false : isExpanded}"
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
+      <div class="video-title" :class="{'fade-in': !isAnimating}"><b>{{ title }}</b></div>
       <div class="video-wrapper">
         <video ref="video" :muted="isMuted" @play="videoPlayed" @pause="videoPaused">
           <source :src="src" type="video/mp4">
@@ -25,7 +24,6 @@ export default {
   props: ['src', 'isLeft', 'description', 'title'],
   data() {
     return {
-      timeout: null,
       isExpanded: false,
       isMuted: true,
       isPaused: true,
@@ -46,14 +44,10 @@ export default {
   },
   methods: {
     toggleVideo() {
-      if (this.isMobile) {
-        if (this.isPaused) {
-          this.playVideo();
-        } else {
-          this.pauseVideo();
-        }
+      if (this.isPaused) {
+        this.playVideo();
       } else {
-        this.mouseOver();
+        this.pauseVideo();
       }
     },
     playVideo(event) {
@@ -79,28 +73,11 @@ export default {
     pauseVideo() {
       this.$refs.video.pause();
       this.isPaused = true;
-    },
-    mouseOver() {
-      if (!this.isAnimating && !this.isMobile) { 
-        this.isExpanded = true;
-        this.timeout = setTimeout(() => {
-          this.$root.$emit('videoPlaying');
-          this.$refs.video.play().catch(error => {
-            console.error('Fehler beim Abspielen des Videos:', error);
-          });
-        }, 1);
-      }
-    },
-    mouseLeave() {
-      if (!this.isAnimating && !this.isMobile) {
-        this.isExpanded = false;
-        clearTimeout(this.timeout);
-        this.$refs.video.pause();
-      }
-    },
+    }
   },
 }
 </script>
+
 
 
 <style>
@@ -159,11 +136,15 @@ export default {
   }
   .video-description {
     width: 100%;
-    padding: 10px;
+    padding-top: 10px;
     color: black;
-    opacity: 0;
-    transition: opacity 2s;
-    align-self: flex-start;
+    text-align: justify;
+  }
+
+  .video-title{
+    width: 100%;
+    color: black;
+    font-size: 30px;
   }
 
   .fade-in {

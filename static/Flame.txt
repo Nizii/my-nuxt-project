@@ -1,4 +1,4 @@
-Eine Art Snake-Spiel, bei dem sich der Ballon nicht verlängert. 
+Eine Art Snake-Spiel in 2D bei dem sich der Ballon nicht verlängert. 
 Das Entwicklerteam bestand aus zwei Informatikern und einem Designer. 
 Ich war für die Gamelogik verantwortlich. 
 Wir haben das Spiel mit C# und Unity entwickelt.
