@@ -12,8 +12,8 @@
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
-        <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
-        <img v-if="isMuted && !isPaused" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
+        <img v-if="isMobile && isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
+        <img v-if="isMuted && !isPaused && isMobile" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
@@ -56,15 +56,12 @@ export default {
         this.mouseOver();
       }
     },
-    playVideo(event) {
-      if (event) event.stopPropagation();
-
+    playVideo() {
       this.$root.$emit('videoPlaying');
-      this.$refs.video.play().then(() => {
-        this.isPaused = false;
-      }).catch(error => {
+      this.$refs.video.play().catch(error => {
         console.error('Fehler beim Abspielen des Videos:', error);
       });
+      this.isPaused = false;
     },
     videoPlayed() {
       this.isPaused = false;
@@ -102,7 +99,6 @@ export default {
 }
 </script>
 
-
 <style>
   .project-container {
     position: relative; 
@@ -113,14 +109,6 @@ export default {
   }
 
   .project-container.expanded {
-    width: 50%;
-  }
-
-  .project-container.animating {
-    animation: none !important;
-  }
-
-  .project-container.expanded:not(.animating) {
     width: 50%;
   }
 
@@ -138,13 +126,13 @@ export default {
     aspect-ratio: 16 / 9; 
     background-color: black;
   }
-  
+
   .video-wrapper video {
     width: 100%;
     height: 100%;
   }
 
-  .unmute-button, .play-button {
+  .play-button, .unmute-button {
     position: absolute;
     width: 50px;
     height: 50px;
@@ -153,10 +141,6 @@ export default {
     transform: translate(-50%, -50%);
   }
 
-  .project-content video {
-    width: 100%;
-    aspect-ratio: 16 / 9; 
-  }
   .video-description {
     width: 100%;
     padding: 10px;
@@ -170,16 +154,6 @@ export default {
     opacity: 1;
   }
 
-  .fade-in-delay {
-    animation: fadeIn 2s forwards;
-    animation-delay: 2s;
-  }
-
-  .slide-from-left,
-  .slide-from-right {
-    animation: slideFromLeft 2s forwards;
-  }
-
   @media only screen and (max-width: 600px) {
     .project-container,
     .project-container.expanded {
@@ -190,20 +164,9 @@ export default {
       flex-direction: column;
     }
 
-    .project-content video {
-      aspect-ratio: auto;
-    }
-
     .video-description {
       width: 100%;
       transition: none;
-      opacity: 1;
-    }
-
-    .slide-from-left,
-    .slide-from-right {
-      animation: none;
-      transform: translateX(0%);
       opacity: 1;
     }
   }

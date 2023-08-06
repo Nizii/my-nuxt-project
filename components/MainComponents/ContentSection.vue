@@ -15,13 +15,31 @@
       :description="descriptions['Wine']"
       />
     <Spacer/>
+
     <VideoComponent 
       class="project"
       :is-left="false" 
       src="/videos/Erp.mp4" 
       :description="descriptions['Erp']"
       />
+    <Spacer/>  
+
+    <VideoComponent 
+      class="project"
+      :is-left="false" 
+      src="/videos/Bot.mp4" 
+      :description="descriptions['Bot']"
+      />
     <Spacer/>
+
+    <VideoComponent 
+      class="project"
+      :is-left="false" 
+      src="/videos/Shield.mp4" 
+      :description="descriptions['Shield']"
+      />
+    <Spacer/>
+
     <VideoComponent 
       class="project"
       :is-left="false" 
@@ -29,6 +47,7 @@
       :description="descriptions['Supersonic']"
       />
     <Spacer/>
+
     <VideoComponent 
       class="project"
       :is-left="false" 
@@ -36,12 +55,7 @@
       :description="descriptions['Flame']"
       />
     <Spacer/>
-    <VideoComponent 
-      class="project"
-      :is-left="false" 
-      src="/videos/Shield.mp4" 
-      :description="descriptions['Shield']"
-      />
+
   </div>
 </template>
 
