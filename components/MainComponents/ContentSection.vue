@@ -76,7 +76,8 @@ export default {
       'Archiv': '',
       'Flame': '',
       'Supersonic': '',
-      'Shield': ''
+      'Shield': '',
+      'Bot': ''
     },
     };
   },
@@ -85,7 +86,7 @@ export default {
   },
   methods: {
     async loadDescriptions() {
-      const files = ['Wine', 'Erp', 'Archiv', 'Flame', 'Supersonic', 'Shield'];
+      const files = ['Wine', 'Erp', 'Archiv', 'Flame', 'Supersonic', 'Shield', 'Bot'];
       for (const file of files) {
         const response = await fetch(`/${file}.txt`);
         if (!response.ok) {
