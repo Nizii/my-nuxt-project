@@ -7,7 +7,7 @@
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
       <div class="video-title" :class="{'fade-in': !isAnimating}"><b>{{ title }}</b></div>
       <div class="video-wrapper">
-        <video ref="video" :muted="isMuted" @play="videoPlayed" @pause="videoPaused">
+        <video ref="video" :muted="isMuted" @play="videoPlayed" @pause="videoPaused" loop>
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
