@@ -1,6 +1,6 @@
 <template>
   <div class="myName">
-    <p class="title-name">Nizam Özdemir</p>
+    <p class="title-name">Nizam Can Özdemir</p>
     <br>
     <br>
     <p class="title-desc">Frontend Developer</p>
