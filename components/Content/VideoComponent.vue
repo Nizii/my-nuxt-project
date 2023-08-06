@@ -12,7 +12,7 @@
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
-        <img v-if="isMobile && isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
+        <img v-if="isMobile && isPaused" @click="playVideo" class="unmute-button" src="~/static/icons/play.png" alt="Play Icon" />
         <img v-if="isMuted && !isPaused" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
