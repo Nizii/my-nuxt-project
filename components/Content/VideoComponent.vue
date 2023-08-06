@@ -123,6 +123,7 @@ export default {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9; 
+    background-color: black;
   }
   
   .video-wrapper video {

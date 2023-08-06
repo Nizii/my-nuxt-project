@@ -3,8 +3,6 @@
     <p class="title-name">Nizam Özdemir</p>
     <br>
     <br>
-    <br>
-    <br>
     <p class="title-desc">Frontend Developer</p>
   </div>
 </template>
