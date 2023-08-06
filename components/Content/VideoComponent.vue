@@ -6,6 +6,7 @@
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
       <div class="video-title" :class="{'fade-in': !isAnimating}"><b>{{ title }}</b></div>
+      <div class="video-tech" :class="{'fade-in': !isAnimating}">{{ tech }}</div>
       <div class="video-wrapper">
         <video ref="video" :muted="isMuted" @play="videoPlayed" @pause="videoPaused" loop>
           <source :src="src" type="video/mp4">
@@ -21,7 +22,7 @@
 
 <script>
 export default {
-  props: ['src', 'isLeft', 'description', 'title'],
+  props: ['src', 'isLeft', 'description', 'title', 'tech'],
   data() {
     return {
       isExpanded: false,
@@ -139,6 +140,12 @@ export default {
     padding-top: 10px;
     color: black;
     text-align: justify;
+  }
+
+  .video-tech{
+    width: 100%;
+    color: black;
+    text-align: left;
   }
 
   .video-title{

@@ -5,6 +5,7 @@
       :is-left="true" 
       src="/videos/Bildarchiv.mp4" 
       :description="descriptions['Archiv']"
+      :tech="'.Net, Vue.js, MongoDB, Azure'"
       :title="'Web'"
       />
     <Spacer/>
@@ -14,6 +15,7 @@
       :is-left="false" 
       src="/videos/Wine.mp4" 
       :description="descriptions['Wine']"
+      :tech="'.Net, nuxt.js, MongoDB, Azure'"
       :title="'Web'"
       />
     <Spacer/>
@@ -23,6 +25,7 @@
       :is-left="false" 
       src="/videos/Erp.mp4" 
       :description="descriptions['Erp']"
+      :tech="'.Net, Vue.js, MySQL, Azure'"
       :title="'Web'"
       />
     <Spacer/>  
@@ -32,6 +35,7 @@
       :is-left="false" 
       src="/videos/Bot.mp4" 
       :description="descriptions['Bot']"
+      :tech="'Python, MySQL'"
       :title="'Trading'"
       />
     <Spacer/>
@@ -41,6 +45,7 @@
       :is-left="false" 
       src="/videos/Shield.mp4" 
       :description="descriptions['Shield']"
+      :tech="'C#, Unity'"
       :title="'Game'"
       />
     <Spacer/>
@@ -50,6 +55,7 @@
       :is-left="false" 
       src="/videos/Supersonic.mp4" 
       :description="descriptions['Supersonic']"
+      :tech="'C#, Unity'"
       :title="'Game'"
       />
     <Spacer/>
@@ -59,6 +65,7 @@
       :is-left="false" 
       src="/videos/Flametrain.mp4" 
       :description="descriptions['Flame']"
+      :tech="'C#, Unity'"
       :title="'Game'"
       />
     <Spacer/>
