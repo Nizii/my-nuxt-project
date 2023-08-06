@@ -12,7 +12,7 @@
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
-        <img v-if="isMobile && isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
+        <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
         <img v-if="isMuted && !isPaused" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
@@ -56,12 +56,15 @@ export default {
         this.mouseOver();
       }
     },
-    playVideo() {
+    playVideo(event) {
+      if (event) event.stopPropagation();
+
       this.$root.$emit('videoPlaying');
-      this.$refs.video.play().catch(error => {
+      this.$refs.video.play().then(() => {
+        this.isPaused = false;
+      }).catch(error => {
         console.error('Fehler beim Abspielen des Videos:', error);
       });
-      this.isPaused = false;
     },
     videoPlayed() {
       this.isPaused = false;
