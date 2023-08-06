@@ -8,17 +8,17 @@
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
       <div class="video-wrapper">
-        <video ref="video" muted>
+        <video ref="video" :muted="isMuted" @play="videoPlayed" @pause="videoPaused">
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
-        <img v-if="isMuted" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
+        <img v-if="isMobile && isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
+        <img v-if="isMuted && !isPaused" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -28,6 +28,7 @@ export default {
       timeout: null,
       isExpanded: false,
       isMuted: true,
+      isPaused: true,
       isAnimating: true,
       isMobile: window.innerWidth <= 600,
     };
@@ -46,18 +47,35 @@ export default {
   methods: {
     toggleVideo() {
       if (this.isMobile) {
-        if (this.$refs.video.paused) {
-          this.$root.$emit('videoPlaying');
-          this.$refs.video.play().catch(error => {
-            console.error('Fehler beim Abspielen des Videos:', error);
-          });
+        if (this.isPaused) {
+          this.playVideo();
         } else {
-          this.$refs.video.pause();
+          this.pauseVideo();
         }
-      }
-      else {
+      } else {
         this.mouseOver();
       }
+    },
+    playVideo() {
+      this.$root.$emit('videoPlaying');
+      this.$refs.video.play().catch(error => {
+        console.error('Fehler beim Abspielen des Videos:', error);
+      });
+      this.isPaused = false;
+    },
+    videoPlayed() {
+      this.isPaused = false;
+    },
+    videoPaused() {
+      this.isPaused = true;
+    },
+    unmute(event) {
+      event.stopPropagation();
+      this.isMuted = false;
+    },
+    pauseVideo() {
+      this.$refs.video.pause();
+      this.isPaused = true;
     },
     mouseOver() {
       if (!this.isAnimating && !this.isMobile) { 
@@ -77,18 +95,10 @@ export default {
         this.$refs.video.pause();
       }
     },
-    unmute(event) {
-      event.stopPropagation();
-      this.$refs.video.muted = false;
-      this.isMuted = false;
-    },
-    pauseVideo() {
-      this.$refs.video.pause();
-    }
   },
 }
-
 </script>
+
 
 <style>
   .project-container {
