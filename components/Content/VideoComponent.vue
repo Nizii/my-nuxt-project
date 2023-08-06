@@ -161,7 +161,7 @@ export default {
     animation: slideFromLeft 2s forwards;
   }
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 1024px) {
     .project-container,
     .project-container.expanded {
       width: 100%;
