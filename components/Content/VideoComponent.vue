@@ -83,14 +83,14 @@ export default {
 <style>
   .project-container {
     position: relative; 
-    width: 50%;
+    width: 60%;
     aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
   }
 
   .project-container.expanded {
-    width: 50%;
+    width: 60%;
   }
 
   .project-container.animating {
@@ -98,7 +98,7 @@ export default {
   }
 
   .project-container.expanded:not(.animating) {
-    width: 50%;
+    width: 60%;
   }
 
   .project-content {
