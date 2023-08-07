@@ -20,8 +20,9 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-  props: ['src', 'isLeft', 'description', 'title', 'tech'],
+  props: ['src', 'isLeft', 'description', 'title', 'tech', 'videoname'],
   data() {
     return {
       isExpanded: false,
@@ -52,22 +53,21 @@ export default {
     playVideo(event) {
       if (event) event.stopPropagation();
 
-      const videoId = this.videoId;
-
-      fetch(`/.netlify/functions/count-views?videoId=${videoId}`)
-        .then(response => response.json())
-        .then(data => {
-          console.log('Video has been played', data.count, 'times');
-        });
-
       this.$root.$emit('videoPlaying');
       this.$refs.video.play().then(() => {
         this.isPaused = false;
+        axios.post('/netlify/functions/increment', { videoname: this.videoname })
+          .then(response => {
+            console.log(response.data);
+          })
+          .catch(error => {
+            console.error(error);
+          });
+
       }).catch(error => {
         console.error('Fehler beim Abspielen des Videos:', error);
       });
     },
-
     videoPlayed() {
       this.isPaused = false;
     },

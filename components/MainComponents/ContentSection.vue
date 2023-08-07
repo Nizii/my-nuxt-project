@@ -7,6 +7,7 @@
       :description="descriptions['Archiv']"
       :tech="'.Net, Vue.js, MongoDB, Azure'"
       :title="'Web'"
+      :videoname="'Bildarchiv'"
       />
     <Spacer/>
 
@@ -17,6 +18,7 @@
       :description="descriptions['Wine']"
       :tech="'.Net, nuxt.js, MongoDB, Azure'"
       :title="'Web'"
+      :videoname="'Wine'"
       />
     <Spacer/>
 
@@ -27,6 +29,7 @@
       :description="descriptions['Erp']"
       :tech="'.Net, Vue.js, MySQL, Azure'"
       :title="'Web'"
+      :videoname="'Erp'"
       />
     <Spacer/>  
 
@@ -37,6 +40,7 @@
       :description="descriptions['Bot']"
       :tech="'Python, MySQL'"
       :title="'Trading'"
+      :videoname="'Bot'"
       />
     <Spacer/>
 
@@ -47,6 +51,7 @@
       :description="descriptions['Shield']"
       :tech="'C#, Unity'"
       :title="'Game'"
+      :videoname="'Shield'"
       />
     <Spacer/>
 
@@ -57,6 +62,7 @@
       :description="descriptions['Supersonic']"
       :tech="'C#, Unity'"
       :title="'Game'"
+      :videoname="'Supersonic'"
       />
     <Spacer/>
 
@@ -67,6 +73,7 @@
       :description="descriptions['Flame']"
       :tech="'C#, Unity'"
       :title="'Game'"
+      :videoname="'Flametrain'"
       />
     <Spacer/>
 
