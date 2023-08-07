@@ -56,7 +56,10 @@ export default {
       this.$root.$emit('videoPlaying');
       this.$refs.video.play().then(() => {
         this.isPaused = false;
-        axios.post('/netlify/functions/increment', { videoname: this.videoname })
+
+        axios.post('/netlify/functions/increment', 
+        JSON.stringify({ videoname: this.videoname }), 
+        { headers: { 'Content-Type': 'application/json' }})
           .then(response => {
             console.log(response.data);
           })
