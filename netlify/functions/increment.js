@@ -8,7 +8,6 @@ exports.handler = async function(event, context) {
     const client = await MongoClient.connect(url, { useUnifiedTopology: true });
     const db = client.db(dbName);
     const collection = db.collection('Counter');
-    console.log('event.body:', event.body.context);
     const videoname = JSON.parse(event.body).videoname;
     
 

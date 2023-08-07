@@ -1,13 +1,14 @@
 <template>
   <div>
     <VideoComponent 
+      id="first-video"
       class="project"
       :is-left="true" 
       src="/videos/Bildarchiv.mp4" 
       :description="descriptions['Archiv']"
       :tech="'.Net, Vue.js, MongoDB, Azure'"
       :title="'Web'"
-      :videoname="Bildarchiv"
+      :videoname="'Bildarchiv'"
       />
     <Spacer/>
 
@@ -18,7 +19,7 @@
       :description="descriptions['Wine']"
       :tech="'.Net, nuxt.js, MongoDB, Azure'"
       :title="'Web'"
-      :videoname="Wine"
+      :videoname="'Wine'"
       />
     <Spacer/>
 
@@ -29,7 +30,7 @@
       :description="descriptions['Erp']"
       :tech="'.Net, Vue.js, MySQL, Azure'"
       :title="'Web'"
-      :videoname="Erp"
+      :videoname="'Erp'"
       />
     <Spacer/>  
 
@@ -40,7 +41,18 @@
       :description="descriptions['Bot']"
       :tech="'Python, MySQL'"
       :title="'Trading'"
-      :videoname="Bot"
+      :videoname="'Bot'"
+      />
+    <Spacer/>
+
+    <VideoComponent 
+      class="project"
+      :is-left="false" 
+      src="/videos/UXPrototyp.mp4" 
+      :description="descriptions['Ux']"
+      :tech="'Figma'"
+      :title="'UX'"
+      :videoname="'Ux'"
       />
     <Spacer/>
 
@@ -51,7 +63,7 @@
       :description="descriptions['Shield']"
       :tech="'C#, Unity'"
       :title="'Game'"
-      :videoname="Shield"
+      :videoname="'Shield'"
       />
     <Spacer/>
 
@@ -62,7 +74,7 @@
       :description="descriptions['Supersonic']"
       :tech="'C#, Unity'"
       :title="'Game'"
-      :videoname="Supersonic"
+      :videoname="'Supersonic'"
       />
     <Spacer/>
 
@@ -73,7 +85,7 @@
       :description="descriptions['Flame']"
       :tech="'C#, Unity'"
       :title="'Game'"
-      :videoname="Flametrain"
+      :videoname="'Flametrain'"
       />
     <Spacer/>
 
@@ -98,7 +110,8 @@ export default {
       'Flame': '',
       'Supersonic': '',
       'Shield': '',
-      'Bot': ''
+      'Bot': '',
+      'Ux': ''
       },
     };
   },
@@ -107,7 +120,7 @@ export default {
   },
   methods: {
     async loadDescriptions() {
-      const files = ['Wine', 'Erp', 'Archiv', 'Flame', 'Supersonic', 'Shield', 'Bot'];
+      const files = ['Wine', 'Erp', 'Archiv', 'Flame', 'Supersonic', 'Shield', 'Bot', 'Ux'];
       for (const file of files) {
         const response = await fetch(`/${file}.txt`);
         if (!response.ok) {

@@ -58,7 +58,7 @@ export default {
         this.isPaused = false;
 
         axios.post('/netlify/functions/increment', 
-        JSON.stringify({ videoname: this.videoname }), 
+        JSON.stringify({ 'videoname': this.videoname }), 
         { headers: { 'Content-Type': 'application/json' }})
           .then(response => {
             console.log(response.data);
@@ -81,6 +81,9 @@ export default {
       this.$refs.video.pause();
       this.isPaused = true;
     }
+  },
+  created() {
+    console.log('Videoname:', this.videoname);
   },
 }
 </script>
@@ -162,6 +165,7 @@ export default {
     width: 100%;
     color: black;
     font-size: 30px;
+    text-align: left;
   }
 
   .fade-in {
