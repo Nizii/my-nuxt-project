@@ -35,22 +35,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 80%;
-    margin: 20px 0;
+  
   }
 
   .text {
-    width: 66%; /* Zwei Drittel der Breite */
   }
 
   .my-description {
     text-align: left;
     font-family: sans-serif;
+    padding-right: 20px;
   }
 
   .foto {
-    width: 33%; /* Ein Drittel der Breite */
     height: auto;
+    width: 300px;
   }
 
   @media only screen and (max-width: 1024px) {
@@ -64,7 +63,7 @@
     }
 
     .foto {
-
+      text-align: center;
     }
 
     #desc-container {
