@@ -2,8 +2,6 @@
   <div>
     <HeaderSection/>
     <DescriptionSection/>
-    <spacer/>
-    <spacer/>
     <ContentSection/>
     <BottomSection/>
   </div>

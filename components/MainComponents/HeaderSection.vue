@@ -104,6 +104,21 @@ export default {
   visibility: visible;
 }
 
+@media only screen and (max-width: 1024px) {
+  .title-name{
+    font-size: 80px;
+    margin: 5% 0;
+  }
+
+  .title-desc{
+    font-size: 40px;
+    margin: 2.5% 0;
+  }
+  .title-txt {
+    font-size: 30px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .title-name{
     font-size: 60px;

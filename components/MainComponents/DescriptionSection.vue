@@ -22,11 +22,14 @@
   }
 
   #desc-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative; 
+    width: 55%;
+    aspect-ratio: auto;
+    margin: auto;
+    transition: all 0.5s ease;
+    height: 100vh;
   }
+
 
   .content {
     display: flex;
@@ -50,23 +53,22 @@
     height: auto;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1024px) {
     .content {
       flex-direction: column;
-      align-items: center;
     }
 
     .text {
       width: 100%;
+      text-align: left;
     }
 
     .foto {
-      width: 80%; /* Anpassung für die mobile Ansicht */
-      height: auto;
+
     }
 
-    .my-description {
-
+    #desc-container {
+      width: 100%;
     }
   }
 </style>
