@@ -39,6 +39,7 @@
   }
 
   .text {
+    font-size: 25px;
   }
 
   .my-description {
@@ -59,6 +60,7 @@
 
     .text {
       width: 100%;
+      font-size: 25px;
       text-align: left;
     }
 

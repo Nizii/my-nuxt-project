@@ -51,7 +51,7 @@ export default {
 }
 
 .title-txt {
-  font-size: 30px;
+  font-size: 25px;
   font-family: sans-serif;
   margin: 0 10px;
   text-decoration: none; 

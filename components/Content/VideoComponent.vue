@@ -153,18 +153,20 @@ export default {
     padding-top: 10px;
     color: black;
     text-align: left;
+    font-size: 25px;
   }
 
   .video-tech{
     width: 100%;
     color: black;
     text-align: left;
+    font-size: 25px;
   }
 
   .video-title{
     width: 100%;
     color: black;
-    font-size: 30px;
+    font-size: 50px;
     text-align: left;
   }
 
