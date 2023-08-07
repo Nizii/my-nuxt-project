@@ -8,12 +8,11 @@
       <div class="video-title" :class="{'fade-in': !isAnimating}"><b>{{ title }}</b></div>
       <div class="video-tech" :class="{'fade-in': !isAnimating}">{{ tech }}</div>
       <div class="video-wrapper">
-        <video ref="video" :muted="isMuted" @play="videoPlayed" @pause="videoPaused" loop>
+        <video ref="video" @play="videoPlayed" @pause="videoPaused" loop>
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
         <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
-        <img v-if="isMuted && !isPaused" @click="unmute" class="unmute-button" src="~/static/icons/mute.png" alt="Unmute Icon" />
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
@@ -26,7 +25,6 @@ export default {
   data() {
     return {
       isExpanded: false,
-      isMuted: true,
       isPaused: true,
       isAnimating: true,
       isMobile: window.innerWidth <= 600,
@@ -67,10 +65,6 @@ export default {
     videoPaused() {
       this.isPaused = true;
     },
-    unmute(event) {
-      event.stopPropagation();
-      this.isMuted = false;
-    },
     pauseVideo() {
       this.$refs.video.pause();
       this.isPaused = true;
@@ -82,6 +76,10 @@ export default {
 
 
 <style>
+  *{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+
   .project-container {
     position: relative; 
     width: 55%;
@@ -139,7 +137,7 @@ export default {
     width: 100%;
     padding-top: 10px;
     color: black;
-    text-align: justify;
+    text-align: left;
   }
 
   .video-tech{
