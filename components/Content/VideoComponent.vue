@@ -52,6 +52,14 @@ export default {
     playVideo(event) {
       if (event) event.stopPropagation();
 
+      const videoId = this.videoId;
+
+      fetch(`/.netlify/functions/count-views?videoId=${videoId}`)
+        .then(response => response.json())
+        .then(data => {
+          console.log('Video has been played', data.count, 'times');
+        });
+
       this.$root.$emit('videoPlaying');
       this.$refs.video.play().then(() => {
         this.isPaused = false;
@@ -59,6 +67,7 @@ export default {
         console.error('Fehler beim Abspielen des Videos:', error);
       });
     },
+
     videoPlayed() {
       this.isPaused = false;
     },
