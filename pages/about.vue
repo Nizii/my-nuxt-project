@@ -2,12 +2,16 @@
   <div id="desc-container">
     <div class="content">
       <div class="about-title-section">
-        <nuxt-link to="/" class="about-btn">Zurück</nuxt-link>
         <div class="title-container"> <!-- Neues Container-Element -->
           <p class="about-title-text">
             Über mich
           </p>
         </div>
+      </div>
+      <div class="link-section">
+        <nuxt-link to="/" class="about-btn">Home</nuxt-link>
+        <a class="about-btn" href="https://github.com/Nizii">GitHub</a>
+        <a class="about-btn" href="https://www.linkedin.com/in/nizam-%C3%B6zdemir-12a4b9264/">LinkedIn</a>
       </div>
       <div class="about-section">
         <div class="about-text">
@@ -16,20 +20,18 @@
             Mit dem erfolgreichen Absolvieren meines Studiums bin ich meinem Traumberuf als Softwareentwickler ein Stück näher gekommen.
             Programmieren habe ich vor dem Studium in privaten Projekten gelernt und möchte dies nun auch beruflich tun.
             In meinem Studium habe ich vielfältige Projekte durchgeführt; einige finden Sie unten auf meiner Seite.
-            Neben Prototyping habe ich auch fertige Produkte erstellt, wobei mein Schwerpunkt im Frontend mit JavaScript und im Backend mit .Net lag.      
+            Neben Prototyping habe ich auch fertige Produkte erstellt, wobei mein Schwerpunkt im Frontend mit JavaScript und im Backend mit .Net lag.  
+            Die Berücksichtigung von Design Patterns und Clean-Code-Prinzipien wie SOLID ist für mich selbstverständlich. 
           </p>
           <p>Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.</p>
         </div>
         <img class="foto" src="~/static/fotos/foto.png">
       </div>
     </div>
-    <div class="link-section">
-      <a class="about-btn" href="">GitHub</a>
-      <a class="about-btn" href="">LinkedIn</a>
-    </div>
     <div class="about-bottom"></div>
   </div>
 </template>
+
 
 <style>
   *{
@@ -197,6 +199,9 @@
   .link-section {
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+  .foto {
+    margin-bottom: 50px;
   }
 }
 

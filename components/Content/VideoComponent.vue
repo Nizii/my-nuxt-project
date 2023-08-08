@@ -135,15 +135,24 @@ export default {
     height: 100%;
   }
 
-  .unmute-button, .play-button {
+  .play-button {
     position: absolute;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: rgb(252, 117, 68);
+    -webkit-mask: url(~/static/icons/play.png) no-repeat center;
+    mask: url(~/static/icons/play.png) no-repeat center;
+    mask-size: cover;
+    transition: transform 0.3s ease;
   }
 
+  .play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
   .project-content video {
     width: 100%;
     aspect-ratio: 16 / 9; 

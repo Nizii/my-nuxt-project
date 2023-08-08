@@ -14,7 +14,16 @@ export default {
   methods: {
     scrollToProjects(target) {
       const element = document.getElementById(target);
-      element.scrollIntoView({ behavior: 'smooth' });
+      const offset = window.innerHeight / 2 - element.clientHeight / 2;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   },
 }
@@ -141,11 +150,9 @@ export default {
   .title-name{
     font-size: 60px;
     margin: 5% 0;
-    text-align: left;
   }
 
   .title-desc{
-    text-align: left;
     font-size: 30px;
     margin: 2.5% 0;
   }

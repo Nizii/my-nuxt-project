@@ -1,1 +1,3 @@
-Ein UX Projekt über sexuelle Aufklärung. Das team bestand aus zwei Informatiker rund einem Designer.
+Ein UX-Projekt über sexuelle Aufklärung für ein Institut aus dem Kanton Luzern.
+Der Fokus lag auf User Experience.
+Das Team bestand aus zwei Informatikern und einem Designer.
