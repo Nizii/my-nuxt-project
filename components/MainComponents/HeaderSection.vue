@@ -4,7 +4,7 @@
     <p class="title-desc">Bsc Informatik Fokus Digital Ideation</p>
     <div class="navigation">
       <a class="title-txt" id="title-txt-right" @click="scrollToProjects('first-video')">Zu den Projekten</a>
-      <a class="title-txt" id="title-txt-left" @click="scrollToProjects('desc-container')">Über mich</a>
+      <nuxt-link to="/about" class="title-txt" id="title-txt-left">Über mich</nuxt-link>
     </div>
   </div>
 </template>
@@ -22,13 +22,13 @@ export default {
 
 <style>
 *{
-  text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 
 .myName{
   height: 100vh;
+  text-align: center;
 }
 
 .title-name{
@@ -47,7 +47,7 @@ export default {
 .navigation{
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 7%;
 }
 
 .title-txt {
@@ -108,14 +108,32 @@ export default {
   .title-name{
     font-size: 80px;
     margin: 5% 0;
+    margin-top: 2em;
+  }
+
+  .navigation{
+    margin-top: 30em;
   }
 
   .title-desc{
     font-size: 40px;
     margin: 2.5% 0;
   }
+
   .title-txt {
-    font-size: 30px;
+    font-size: 25px;
+    font-family: sans-serif;
+    margin: 0 10px;
+    text-decoration: none; 
+    color: inherit;
+    color: rgb(252, 117, 68);
+    position: relative;
+    overflow: hidden;
+    padding: 10px 10px;
+    display: inline-block;
+    cursor: pointer;
+    width: 40%;
+    transition: border 0.3s ease-in-out;
   }
 }
 
@@ -123,14 +141,21 @@ export default {
   .title-name{
     font-size: 60px;
     margin: 5% 0;
+    text-align: left;
   }
 
   .title-desc{
+    text-align: left;
     font-size: 30px;
     margin: 2.5% 0;
   }
   .title-txt {
     font-size: 17px;
+  }
+
+  .navigation{
+    display: flex;
+    margin-top: 8em;
   }
 }
 </style>

@@ -185,6 +185,78 @@ export default {
   }
 
   @media only screen and (max-width: 1024px) {
+    .video-title{
+      width: 100%;
+      color: black;
+      font-size: 50px;
+      text-align: left;
+    }
+
+    .video-tech{
+      width: 100%;
+      color: black;
+      text-align: left;
+      font-size: 25px;
+    }
+
+    .video-description {
+      width: 100%;
+      padding-top: 10px;
+      color: black;
+      text-align: left;
+      font-size: 25px;
+    }
+
+    .project-container,
+    .project-container.expanded {
+      width: 100%;
+    }
+
+    .project-content {
+      flex-direction: column;
+    }
+
+    .project-content video {
+      aspect-ratio: auto;
+    }
+
+    .video-description {
+      width: 100%;
+      transition: none;
+      opacity: 1;
+    }
+
+    .slide-from-left,
+    .slide-from-right {
+      animation: none;
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .video-title{
+      width: 100%;
+      color: black;
+      font-size: 30px;
+      text-align: left;
+    }
+
+    .video-tech{
+      width: 100%;
+      color: black;
+      text-align: left;
+      font-size: 17px;
+    }
+
+    .video-description {
+      width: 100%;
+      padding-top: 10px;
+      color: black;
+      text-align: left;
+      font-size: 17px;
+    }
+
     .project-container,
     .project-container.expanded {
       width: 100%;
