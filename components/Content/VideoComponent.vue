@@ -51,14 +51,15 @@ export default {
       }
     },
     playVideo(event) {
+      const vm = this;
       if (event) event.stopPropagation();
 
-      this.$root.$emit('videoPlaying');
-      this.$refs.video.play().then(() => {
-        this.isPaused = false;
+      vm.$root.$emit('videoPlaying');
+      vm.$refs.video.play().then(() => {
+        vm.isPaused = false;
 
-        axios.post('/netlify/functions/increment', 
-        JSON.stringify({ 'videoname': this.videoname }), 
+        axios.post('/.netlify/functions/increment', 
+        JSON.stringify({ 'videoname': vm.videoname }),
         { headers: { 'Content-Type': 'application/json' }})
           .then(response => {
             console.log(response.data);
@@ -71,6 +72,7 @@ export default {
         console.error('Fehler beim Abspielen des Videos:', error);
       });
     },
+
     videoPlayed() {
       this.isPaused = false;
     },
@@ -157,6 +159,7 @@ export default {
     width: 100%;
     aspect-ratio: 16 / 9; 
   }
+
   .video-description {
     width: 100%;
     padding-top: 10px;

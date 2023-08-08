@@ -6,16 +6,19 @@ const dbName = 'portfolio';
 exports.handler = async function(event, context) {
   try {
     const client = await MongoClient.connect(url, { useUnifiedTopology: true });
+    console.log("Client "+client);
     const db = client.db(dbName);
+    console.log("DB  "+client.db(dbName));
     const collection = db.collection('Counter');
+    console.log("Collection "+collection);
     const videoname = JSON.parse(event.body).videoname;
-    
-
+    console.log("Videoname " + videoname);
     const videoEntry = await collection.findOneAndUpdate(
       { name: videoname },
       { $inc: { count: 1 }, $setOnInsert: { name: videoname } },
       { upsert: true, returnOriginal: false }
     );
+    console.log("VideoEntry " + videoEntry);
 
     client.close();
 
