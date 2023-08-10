@@ -212,16 +212,14 @@ export default {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    border: none;
-    padding: 5px;
     width: 30px;
     height: 30px;
     cursor: pointer;
     opacity: 0.8;
-    background-color: rgb(252, 117, 68);
-    -webkit-mask: url(~/static/icons/fullscreen.png) no-repeat center;
-    mask: url(~/static/icons/fullscreen.png) no-repeat center;
-    mask-size: cover;
+    background-image: url(~/static/icons/fullscreen.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     transition: transform 0.3s ease;
   }
   
@@ -280,9 +278,6 @@ export default {
   }
 
   @media only screen and (max-width: 600px) {
-    .fullscreen-button {
-      display: none;
-    }
 
     .video-title{
       width: 100%;
