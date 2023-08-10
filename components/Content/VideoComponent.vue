@@ -218,7 +218,13 @@ export default {
     font-size: 14px;
     cursor: pointer;
     opacity: 0.8;
-    transition: opacity 0.3s ease;
+
+    transform: translate(-50%, -50%);
+    background-color: rgb(252, 117, 68);
+    -webkit-mask: url(~/static/icons/fullscreen.png) no-repeat center;
+    mask: url(~/static/icons/fullscreen.png) no-repeat center;
+    mask-size: cover;
+    transition: transform 0.3s ease;
   }
   
   .fullscreen-button:hover {
