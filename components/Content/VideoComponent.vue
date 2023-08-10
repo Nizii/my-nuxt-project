@@ -13,7 +13,8 @@
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
         <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
-        <button v-if="isMobile" @click="toggleFullscreen" class="fullscreen-button">Vollbild</button>
+        <img v-if="isMobile" @click="toggleFullscreen" src="~/static/icons/fullscreen.png"  class="fullscreen-button"/>
+
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
