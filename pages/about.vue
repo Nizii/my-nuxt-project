@@ -1,13 +1,5 @@
 <template>
   <div id="desc-container">
-    <div class="content">
-      <div class="about-title-section">
-        <div class="title-container"> <!-- Neues Container-Element -->
-          <p class="about-title-text">
-            Über mich
-          </p>
-        </div>
-      </div>
       <div class="link-section">
         <nuxt-link to="/" class="about-btn">Home</nuxt-link>
         <a class="about-btn" href="https://github.com/Nizii">GitHub</a>
@@ -15,19 +7,26 @@
       </div>
       <div class="about-section">
         <div class="about-text">
+          <p class="about-title-text">
+            Über mich
+          </p>
           <p>
             Mein Name ist Nizam Can Özdemir, und ich bin 35 Jahre alt.
             Mit dem erfolgreichen Absolvieren meines Studiums bin ich meinem Traumberuf als Softwareentwickler ein Stück näher gekommen.
             Programmieren habe ich vor dem Studium in privaten Projekten gelernt und möchte dies nun auch beruflich tun.
+          </p>
+            
+          <p>
             In meinem Studium habe ich vielfältige Projekte durchgeführt; einige finden Sie unten auf meiner Seite.
             Neben Prototyping habe ich auch fertige Produkte erstellt, wobei mein Schwerpunkt im Frontend mit JavaScript und im Backend mit .Net lag.  
-            Die Berücksichtigung von Design Patterns und Clean-Code-Prinzipien wie SOLID ist für mich selbstverständlich. 
+            Die Berücksichtigung von Design Patterns und Clean-Code-Prinzipien wie zum Beispiel SOLID ist für mich selbstverständlich. 
           </p>
-          <p>Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.</p>
         </div>
         <img class="foto" src="~/static/fotos/foto.png">
+        <p class="about-text">
+          Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
+        </p>
       </div>
-    </div>
     <div class="about-bottom"></div>
   </div>
 </template>
@@ -48,7 +47,6 @@
     text-align: center;
     font-size: 25px;
     font-family: sans-serif;
-    margin: 0 10px;
     text-decoration: none; 
     color: inherit;
     color: rgb(252, 117, 68);
@@ -104,10 +102,12 @@
     aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
-    height: 100vh;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    padding-top: 40px;
   }
   
   .about-title-section {
@@ -129,7 +129,7 @@
   }
   
   .about-title-text {
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
 
@@ -145,19 +145,19 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-top: 5em;
     margin-bottom: 3em;
   }
   
   .about-text {
     text-align: left;
     font-size: 25px;
-    width: 50%;
+    width: 60%;
+    margin-right: 5em;
   }
   
   .foto {
     height: auto;
-    width: 300px;
+    width: 40%;
   }
   
   @media only screen and (max-width: 1024px) {
@@ -169,39 +169,52 @@
       font-size: 25px;
     }
   }
-  
-/* Bestehende Styles bleiben unverändert */
 
 @media only screen and (max-width: 600px) {
-  .about-section {
-    flex-direction: column;
+  
+  .link-section {
+    position: fixed;
+    top: 0em;
+    left: 0;
     width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    padding-top: 10px;
+    border-bottom: 0.5px solid rgb(212, 212, 212); 
   }
-  .about-title-section {
-    flex-direction: column;
-    align-items: center;
+
+  .about-title-text{
+    text-align: center;
   }
-  .about-text {
-    width: 100%;
-    font-size: 17px;
-    text-align: left;
-  }
+
   #desc-container {
-    width: 100%;
+    margin-top: 35px;
   }
+
   .about-btn {
     font-size: 17px;
-    margin-bottom: 1em;
+    padding-bottom: 20px;
   }
   .title-container {
-    width: 100%;
+    width: auto;
   }
-  .link-section {
-    margin-top: 1em;
-    margin-bottom: 1em;
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
+
+  .about-text {
+    font-size: 17px;
+    width: 95%;
+    margin-right: 0;
+    text-align: left;
+  }
+
   .foto {
-    margin-bottom: 50px;
+    margin: 20px auto;
+    width: 95%; 
+    max-width: 300px;
   }
 }
 

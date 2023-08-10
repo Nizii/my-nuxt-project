@@ -1,5 +1,16 @@
 <template>
   <div class="bottom-body">
+    <div class="contact-txt">
+      <p>
+        <b>Interesse geweckt?</b>
+      </p>
+      <p>
+        Kontaktieren sie mich per Mail: nizam.oezdemir@gmx.ch
+      </p>
+      <p id="tel-txt">
+        Oder telefonisch unter: 076 404 01 68
+      </p>
+    </div>
     <a class="to-header" @click="scrollToHeader()">Nach oben zur Startseite</a>
   </div>
 </template>
@@ -18,9 +29,21 @@ export default {
 </script>
 
 <style>
+  #tel-txt{
+    margin-bottom: 150px;
+  }
+
   .bottom-body {
-    height: 200px;
+    height: auto;
     text-align: center;
+  }
+
+  .contact-txt {
+    width: 100%;
+    padding-top: 10px;
+    color: black;
+    text-align: center;
+    font-size: 25px;
   }
 
   .to-header {
@@ -37,6 +60,7 @@ export default {
     cursor: pointer;
     width: 20%;
     transition: border 0.3s ease-in-out;
+    margin-bottom: 100px;
   }
 
   .to-header:hover {
@@ -75,5 +99,57 @@ export default {
   .to-header:hover::after {
     height: 100%;
     visibility: visible;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .to-header {
+      font-size: 25px;
+      font-family: sans-serif;
+      margin: 0 10px;
+      text-decoration: none; 
+      color: inherit;
+      color: rgb(252, 117, 68);
+      position: relative;
+      overflow: hidden;
+      padding: 10px 10px;
+      display: inline-block;
+      cursor: pointer;
+      width: 50%;
+      transition: border 0.3s ease-in-out;
+    }
+
+    .contact-txt {
+      width: 100%;
+      padding-top: 10px;
+      color: black;
+      text-align: center;
+      font-size: 25px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .to-header {
+      font-size: 25px;
+      font-family: sans-serif;
+      margin: 0 10px;
+      text-decoration: none; 
+      color: inherit;
+      color: rgb(252, 117, 68);
+      position: relative;
+      overflow: hidden;
+      padding: 10px 10px;
+      display: inline-block;
+      cursor: pointer;
+      width: 90%;
+      transition: border 0.3s ease-in-out;
+    }
+
+    .contact-txt {
+      width: 100%;
+      padding-top: 10px;
+      color: black;
+      text-align: left;
+      font-size: 17px;
+    }
   }
 </style>

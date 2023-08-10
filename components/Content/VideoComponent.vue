@@ -13,6 +13,7 @@
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
         <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
+        <button v-if="isMobile" @click="toggleFullscreen" class="fullscreen-button">Vollbild</button>
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
@@ -48,6 +49,17 @@ export default {
         this.playVideo();
       } else {
         this.pauseVideo();
+      }
+    },
+    toggleFullscreen() {
+      if (this.$refs.video.requestFullscreen) {
+        this.$refs.video.requestFullscreen();
+      } else if (this.$refs.video.mozRequestFullScreen) { // Firefox
+        this.$refs.video.mozRequestFullScreen();
+      } else if (this.$refs.video.webkitRequestFullscreen) { // Chrome, Safari & Opera
+        this.$refs.video.webkitRequestFullscreen();
+      } else if (this.$refs.video.msRequestFullscreen) { // IE/Edge
+        this.$refs.video.msRequestFullscreen();
       }
     },
     playVideo(event) {
@@ -196,6 +208,23 @@ export default {
     animation: slideFromLeft 2s forwards;
   }
 
+  .fullscreen-button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .fullscreen-button:hover {
+    opacity: 1;
+  }
+
   @media only screen and (max-width: 1024px) {
     .video-title{
       width: 100%;
@@ -247,6 +276,10 @@ export default {
   }
 
   @media only screen and (max-width: 600px) {
+    .fullscreen-button {
+      display: none;
+    }
+
     .video-title{
       width: 100%;
       color: black;

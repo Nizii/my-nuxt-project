@@ -1,6 +1,6 @@
 <template>
   <div class="myName">
-    <p class="title-name">Nizam Can Özdemir</p>
+    <p class="title-name">Nizam Özdemir</p>
     <p class="title-desc">Bsc Informatik Fokus Digital Ideation</p>
     <div class="navigation">
       <a class="title-txt" id="title-txt-right" @click="scrollToProjects('first-video')">Zu den Projekten</a>
@@ -163,6 +163,11 @@ export default {
   .navigation{
     display: flex;
     margin-top: 8em;
+  }
+
+  .myName{
+    height: 100vh;
+    text-align: left;
   }
 }
 </style>
