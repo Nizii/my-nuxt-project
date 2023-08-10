@@ -14,7 +14,6 @@
         </video>
         <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
         <img v-if="isMobile" @click="toggleFullscreen" src="~/static/icons/fullscreen.png"  class="fullscreen-button"/>
-
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
     </div>
@@ -213,14 +212,12 @@ export default {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background-color: white;
     border: none;
-    padding: 5px 10px;
-    font-size: 14px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     opacity: 0.8;
-
-    transform: translate(-50%, -50%);
     background-color: rgb(252, 117, 68);
     -webkit-mask: url(~/static/icons/fullscreen.png) no-repeat center;
     mask: url(~/static/icons/fullscreen.png) no-repeat center;
