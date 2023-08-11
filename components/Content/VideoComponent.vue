@@ -155,6 +155,7 @@ export default {
     height: 70px;
     top: 50%;
     left: 50%;
+    opacity: 0.8;
     transform: translate(-50%, -50%);
     background-color: rgb(252, 117, 68);
     -webkit-mask: url(~/static/icons/play.png) no-repeat center;
