@@ -22,7 +22,7 @@
             Die Berücksichtigung von Design Patterns und Clean-Code-Prinzipien wie zum Beispiel SOLID ist für mich selbstverständlich. 
           </p>
         </div>
-        <img class="foto" src="~/static/fotos/foto.png">
+        <img class="foto" src="~/static/fotos/nizi.png">
         <p class="about-text-bottom">
           Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
         </p>
@@ -224,13 +224,15 @@
     width: 95%; 
     max-width: 300px;
   }
-}
-
-.about-text-bottom {
+  
+  .about-text-bottom {
   text-align: left;
   font-size: 17px;
   width: 100%;
   margin-top: 2em;
 }
+}
+
+
 
 </style>
