@@ -20,12 +20,13 @@
             In meinem Studium habe ich vielfältige Projekte durchgeführt; einige finden Sie unten auf meiner Seite.
             Neben Prototyping habe ich auch fertige Produkte erstellt, wobei mein Schwerpunkt im Frontend mit JavaScript und im Backend mit .Net lag.  
             Die Berücksichtigung von Design Patterns und Clean-Code-Prinzipien wie zum Beispiel SOLID ist für mich selbstverständlich. 
+          </p>        
+          <p class="about-text-bottom">
+          Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
           </p>
         </div>
         <img class="foto" src="~/static/fotos/nizi.png">
-        <p class="about-text-bottom">
-          Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
-        </p>
+
       </div>
     <div class="about-bottom"></div>
   </div>
