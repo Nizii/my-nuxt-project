@@ -226,4 +226,11 @@
   }
 }
 
+.about-text-bottom {
+  text-align: left;
+  font-size: 17px;
+  width: 100%;
+  margin-top: 2em;
+}
+
 </style>
