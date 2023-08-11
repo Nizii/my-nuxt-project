@@ -212,10 +212,10 @@ export default {
     position: absolute;
     bottom: 10px;
     right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
-    opacity: 0.8;
+    opacity: 0.6;
     background-image: url(~/static/icons/fullscreen.png);
     background-repeat: no-repeat;
     background-position: center;

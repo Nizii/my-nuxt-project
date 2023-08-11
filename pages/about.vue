@@ -23,7 +23,7 @@
           </p>
         </div>
         <img class="foto" src="~/static/fotos/foto.png">
-        <p class="about-text">
+        <p class="about-text-bottom">
           Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
         </p>
       </div>
@@ -138,6 +138,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex-wrap: wrap;
   }
   
   .link-section {
@@ -151,14 +152,21 @@
   .about-text {
     text-align: left;
     font-size: 25px;
-    width: 60%;
-    margin-right: 5em;
+    width: 58%;
+    margin-right: 2%;
   }
   
   .foto {
     height: auto;
     width: 40%;
   }
+
+  .about-text-bottom {
+    text-align: left;
+    font-size: 25px;
+    width: 100%;
+    margin-top: 2em;
+}
   
   @media only screen and (max-width: 1024px) {
     #desc-container {

@@ -11,7 +11,7 @@
         Oder telefonisch unter: 076 404 01 68
       </p>
     </div>
-    <a class="to-header" @click="scrollToHeader()">Nach oben zur Startseite</a>
+    <a class="to-header" @click="scrollToHeader()">Zurück zum Anfang</a>
   </div>
 </template>
 
@@ -116,6 +116,7 @@ export default {
       cursor: pointer;
       width: 50%;
       transition: border 0.3s ease-in-out;
+      margin-bottom: 100px;
     }
 
     .contact-txt {
@@ -142,6 +143,7 @@ export default {
       cursor: pointer;
       width: 90%;
       transition: border 0.3s ease-in-out;
+      margin-bottom: 100px;
     }
 
     .contact-txt {

@@ -1,7 +1,6 @@
 <template>
   <div>
     <HeaderSection/>
-    <spacer/>
     <ContentSection/>
     <BottomSection/>
   </div>
