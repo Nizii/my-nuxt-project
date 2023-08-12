@@ -237,7 +237,7 @@
 
   .about-text {
     font-size: 17px;
-    width: 100%;
+    width: 95%;
     margin-right: 0;
     text-align: left;
   }

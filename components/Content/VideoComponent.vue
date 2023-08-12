@@ -39,6 +39,7 @@ export default {
       }, 2000);
     }
     this.$root.$on('videoPlaying', this.pauseVideo);
+    this.$refs.video.volume = 0.5;
   },
   beforeDestroy() {
     this.$root.$off('videoPlaying', this.pauseVideo);
