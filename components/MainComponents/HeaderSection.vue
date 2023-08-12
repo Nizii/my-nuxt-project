@@ -14,7 +14,10 @@ export default {
   methods: {
     scrollToProjects(target) {
       const element = document.getElementById(target);
-      const offset = window.innerHeight / 2 - element.clientHeight / 2;
+      const isMobile = window.innerWidth <= 600;
+      const mobileOffset = window.innerHeight / 2 - element.clientHeight / 2;
+      const desktopOffset = (window.innerHeight / 2 - element.clientHeight / 2) - 180;
+      const offset = isMobile ? mobileOffset : desktopOffset; 
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;

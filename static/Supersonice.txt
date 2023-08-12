@@ -1,0 +1,6 @@
+Supersonic is a racing game where two players duel against each other. 
+On one hand, one player controls the spaceship, and on the other, there's the track builder, 
+who tries to destroy the spaceship by creating curves. 
+The development team consisted of 3 computer scientists and a designer. 
+I was in charge of the physics. The game was developed using Unity and C#.
+Development period: 6 weeks.

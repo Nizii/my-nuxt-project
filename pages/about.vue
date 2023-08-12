@@ -99,7 +99,7 @@
   }
   #desc-container {
     position: relative;
-    width: 55%;
+    width: 80%;
     aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
@@ -147,7 +147,6 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    margin-bottom: 3em;
   }
   
   .about-text {
@@ -168,16 +167,37 @@
     width: 100%;
     margin-top: 2em;
 }
-  
-  @media only screen and (max-width: 1024px) {
-    #desc-container {
-      width: 90%;
-    }
 
-    .about-btn{
-      font-size: 25px;
-    }
+@media (min-width: 2560px) {
+  #desc-container {
+    width: 40%;
   }
+
+  .foto{
+    width: 40%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 2559px) {
+  #desc-container {
+    width: 90%;
+  }
+
+  .foto {
+    width: 25%;
+  }
+}
+
+  
+@media only screen and (max-width: 1024px) {
+  #desc-container {
+    width: 90%;
+  }
+  
+  .about-btn{
+    font-size: 25px;
+  }
+}
 
 @media only screen and (max-width: 600px) {
   

@@ -1,0 +1,4 @@
+A UX project on sexual education for an institute from the Canton of Lucerne.
+The focus was on User Experience.
+The team consisted of two computer scientists and a designer.
+Development period: 3 weeks.

@@ -29,7 +29,7 @@ export default {
       isExpanded: false,
       isPaused: true,
       isAnimating: true,
-      isMobile: window.innerWidth <= 600,
+      isMobile: true
     };
   },
   mounted() {
@@ -226,6 +226,12 @@ export default {
   
   .fullscreen-button:hover {
     opacity: 1;
+  }
+
+  @media (min-width: 2560px) {
+    .project-container {
+      width: 30%;
+    }
   }
 
   @media only screen and (max-width: 1024px) {

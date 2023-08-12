@@ -1,4 +1,4 @@
-Ein Bot, der mit Bitcoins handelt. 
+Im Rahmen eines Modul-Mentorats habe ich einen Bot erstellt, der mit Bitcoins handelt.
 Dabei wendet er zwei Strategien an den MAVG (Moving average) und den RSI (Relative Strength Index).
 Er ist am besten für den Hochfrequenzhandel im Sekunden- oder Minutenbereich geeignet.
 Dieses Projekt ist ein Einzelprojekt, das ich mit Python programmiert habe.
@@ -6,3 +6,4 @@ Der Bot handelt über den Lykke- oder den Kraken-Broker, welche die REST-API ode
 Seit April 2022 sammle ich Bitcoin-Daten in Sekundenintervallen über einen Datacollector-Bot, den ich ebenfalls mit Python geschrieben habe.
 Das Ziel ist es, den Bot über einen größeren Datensatz von Jahren im Sekundenintervall zu simulieren und zu optimieren.
 Der Bot läuft auf der Pythonanywhere Cloud.
+Entwicklungszeitraum 12 Wochen.

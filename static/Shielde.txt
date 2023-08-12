@@ -1,0 +1,7 @@
+Shield Heroe is a VR game where you defeat enemies with shields. 
+These shields can be thrown like boomerangs or can reflect the projectiles of the enemies. 
+The development team consisted of three computer scientists. 
+I was responsible for the throwing and deflecting motions of the shields, among other things. 
+The world is constructed from hexagons and stands out for its uniqueness, 
+as it is created through a generative process.
+Development period: 6 weeks.

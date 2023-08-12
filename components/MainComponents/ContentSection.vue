@@ -6,7 +6,7 @@
       :is-left="true" 
       src="/videos/Bildarchiv.mp4" 
       :description="descriptions['Archiv']"
-      :tech="'.Net, Vue.js, MongoDB, Azure'"
+      :tech="'.Net, Vue.js, MongoDB, Azure, Figma'"
       :title="'Web'"
       :videoname="'Bildarchiv'"
       />
@@ -17,7 +17,7 @@
       :is-left="false" 
       src="/videos/Wine.mp4" 
       :description="descriptions['Wine']"
-      :tech="'.Net, nuxt.js, MongoDB, Azure'"
+      :tech="'.Net, nuxt.js, MongoDB, Azure, Figma'"
       :title="'Web'"
       :videoname="'Wine'"
       />
@@ -28,7 +28,7 @@
       :is-left="false" 
       src="/videos/Erp.mp4" 
       :description="descriptions['Erp']"
-      :tech="'.Net, Vue.js, MySQL, Azure'"
+      :tech="'.Net, Vue.js, MySQL, Azure, Figma'"
       :title="'Web'"
       :videoname="'Erp'"
       />

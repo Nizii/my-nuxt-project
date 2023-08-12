@@ -1,0 +1,5 @@
+Online exhibition for the City Museum of Aarau during the lockdown.
+Our team consisted of 2 designers and 2 IT specialists (frontend and backend).
+The module also included discussions with the client and the collection of requirements.
+I developed the backend using .Net and Azure. MongoDB was used as the database.
+The development period was 6 weeks.

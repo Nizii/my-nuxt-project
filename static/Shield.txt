@@ -1,5 +1,7 @@
-Shield Heroe ist ein VR-Spiel, bei dem man die Gegner mit Schildern besiegt. 
+Shield Hero ist ein VR-Spiel, bei dem man die Gegner mit Schildern besiegt. 
 Dabei können die Schilder wie Bumerangs geworfen werden oder die Geschosse der Gegner werden reflektiert. 
 Das Entwicklerteam bestand aus drei Informatikern. 
 Ich war u.a. für die Wurf- und Abwerbewegung der Schilder verantwortlich. 
-Die Welt ist aus Hexagonen aufgebaut und zeichnet sich durch ihre Einzigartigkeit aus, da sie durch einen generativen Prozess erschaffen wird.
+Die Welt ist aus Hexagonen aufgebaut und zeichnet sich durch ihre Einzigartigkeit aus, 
+da sie durch einen generativen Prozess erschaffen wird.
+Entwicklungszeitraum 6 Wochen.

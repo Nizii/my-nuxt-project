@@ -1,0 +1,11 @@
+An interactive wine list for people with limited wine knowledge,
+and for restaurants that can't afford a sommelier,
+but still want to offer a wine experience. The team consisted of me and a designer.
+The frontend was developed with Nuxt.js, the backend with .Net.
+The database used was MongoDB.
+Additionally, I worked with JWT tokens and BCrypt.
+The calculation of the match between the user's taste profile and
+that of the wine was done using the Euclidean distance formula.
+This involved calculating the distance of points from two arrays, 
+summing them up, and displaying as a percentage.
+Development period: 12 weeks.

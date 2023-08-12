@@ -3,3 +3,4 @@ Einerseits steuert ein Spieler das Raumschiff und andererseits ist der Streckenb
 der versucht, das Raumschiff durch Kurven zu zerstören. 
 Das Entwicklerteam bestand aus 3 Informatikern und einem Designer. 
 Ich war für die Physik verantwortlich. Das Spiel wurde mit Unity und C# entwickelt.
+Entwicklungszeitraum 6 Wochen.

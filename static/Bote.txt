@@ -1,0 +1,9 @@
+As part of a module mentorship, I created a bot that trades with Bitcoins.
+It applies two strategies: MAVG (Moving Average) and RSI (Relative Strength Index).
+It is best suited for high-frequency trading on a second or minute basis.
+This project is an individual project, which I programmed using Python.
+The bot trades via the Lykke or Kraken broker, which provide the REST-API or gRPC.
+Since April 2022, I have been collecting Bitcoin data at second intervals using a data collector bot, which I also wrote in Python.
+The goal is to simulate and optimize the bot over a larger dataset spanning years at second intervals.
+The bot runs on the Pythonanywhere Cloud.
+Development period: 12 weeks.

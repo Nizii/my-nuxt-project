@@ -1,0 +1,5 @@
+A kind of 2D snake game where the balloon doesn't get longer. 
+The development team consisted of two computer scientists and one designer. 
+I was responsible for the game logic. 
+We developed the game using C# and Unity.
+Development period: 4 weeks.

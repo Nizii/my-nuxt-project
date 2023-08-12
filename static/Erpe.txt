@@ -1,0 +1,8 @@
+As part of a module mentorship, I developed an initial version of an ERP system 
+for a one-man plumbing business. The scope of this module included 
+the collection of requirements, service level agreements, 
+a prototype, and the implementation of an initial functional version. 
+The system (Version 2) is still in development. I am working on it alone. 
+I designed it using Figma. I developed the frontend with Vue.js and 
+the backend with .Net. I use MySQL as the database. 
+Development period: 12 weeks.
