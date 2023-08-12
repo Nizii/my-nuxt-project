@@ -7,7 +7,7 @@
       src="/videos/Bildarchiv.mp4" 
       :description="descriptions['Archiv']"
       :tech="'.Net, Vue.js, MongoDB, Azure, Figma'"
-      :title="'Web'"
+      :title="'Stadtmuseum  Aarau'"
       :videoname="'Bildarchiv'"
       :preview="'/previews/archiv.png'"
       />
@@ -19,7 +19,7 @@
       src="/videos/Wine.mp4" 
       :description="descriptions['Wine']"
       :tech="'.Net, nuxt.js, MongoDB, Azure, Figma'"
-      :title="'Web'"
+      :title="'Interaktive Weinkarte'"
       :videoname="'Wine'"
       :preview="'/previews/wine.png'"
       />
@@ -31,7 +31,7 @@
       src="/videos/Erp.mp4" 
       :description="descriptions['Erp']"
       :tech="'.Net, Vue.js, MySQL, Azure, Figma'"
-      :title="'Web'"
+      :title="'ERP System'"
       :videoname="'Erp'"
       :preview="'/previews/erp.png'"
       />
@@ -43,7 +43,7 @@
       src="/videos/Bot.mp4" 
       :description="descriptions['Bot']"
       :tech="'Python, MySQL'"
-      :title="'Trading'"
+      :title="'Trading Bitcoin Bot'"
       :videoname="'Bot'"
       :preview="'/previews/bot.png'"
       />
@@ -55,7 +55,7 @@
       src="/videos/UXPrototyp.mp4" 
       :description="descriptions['Ux']"
       :tech="'Figma'"
-      :title="'UX'"
+      :title="'UX Projekt: Aufklärung'"
       :videoname="'Ux'"
       :preview="'/previews/ux.png'"
       />
@@ -67,7 +67,7 @@
       src="/videos/Shield.mp4" 
       :description="descriptions['Shield']"
       :tech="'C#, Unity'"
-      :title="'Game'"
+      :title="'Shield Hero VR'"
       :videoname="'Shield'"
       :preview="'/previews/shield.png'"
       />
@@ -79,7 +79,7 @@
       src="/videos/Supersonic.mp4" 
       :description="descriptions['Supersonic']"
       :tech="'C#, Unity'"
-      :title="'Game'"
+      :title="'Supersonic Bridge Racer'"
       :videoname="'Supersonic'"
       :preview="'/previews/supersonic.png'"
       />
@@ -91,7 +91,7 @@
       src="/videos/Flametrain.mp4" 
       :description="descriptions['Flame']"
       :tech="'C#, Unity'"
-      :title="'Game'"
+      :title="'Flametrain 2D'"
       :videoname="'Flametrain'"
       :preview="'/previews/flame.png'"
       />

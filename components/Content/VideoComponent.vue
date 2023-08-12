@@ -6,7 +6,7 @@
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
       <div class="video-title" :class="{'fade-in': !isAnimating}"><b>{{ title }}</b></div>
-      <div class="video-tech" :class="{'fade-in': !isAnimating}">{{ tech }}</div>
+      
       <div class="video-wrapper">
         <video ref="video" @play="videoPlayed" @pause="videoPaused" loop :poster="preview">
           <source :src="src" type="video/mp4">
@@ -16,6 +16,7 @@
         <img v-if="isMobile" @click="toggleFullscreen" src="~/static/icons/fullscreen.png"  class="fullscreen-button"/>
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
+      <div class="video-tech" :class="{'fade-in': !isAnimating}">{{ tech }}</div>
     </div>
   </div>
 </template>
@@ -187,6 +188,7 @@ export default {
     color: black;
     text-align: left;
     font-size: 25px;
+    margin-top: 20px;
   }
 
   .video-title{
@@ -290,7 +292,7 @@ export default {
     .video-title{
       width: 100%;
       color: black;
-      font-size: 30px;
+      font-size: 25px;
       text-align: left;
     }
 
@@ -298,7 +300,7 @@ export default {
       width: 100%;
       color: black;
       text-align: left;
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .video-description {
@@ -306,7 +308,7 @@ export default {
       padding-top: 10px;
       color: black;
       text-align: left;
-      font-size: 17px;
+      font-size: 15px;
     }
 
     .project-container,
