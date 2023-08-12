@@ -112,6 +112,12 @@ export default {
   visibility: visible;
 }
 
+@media (min-width: 1024px) and (max-height: 1080px) and (max-width: 1920px){
+  .title-txt {
+    font-size: 20px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .title-name{
     font-size: 80px;

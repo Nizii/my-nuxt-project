@@ -101,6 +101,16 @@ export default {
     visibility: visible;
   }
 
+  @media (min-width: 1024px) and (max-height: 1080px) and (max-width: 1920px){
+    .contact-txt{
+      font-size: 15px;
+    }
+
+    .to-header{
+      font-size: 20px;
+    }
+  }
+
   @media only screen and (max-width: 1024px) {
     .to-header {
       font-size: 25px;

@@ -188,6 +188,20 @@
   }
 }
 
+@media (min-width: 1024px) and (max-height: 1080px) and (max-width: 1920px){
+  .about-text {
+    font-size: 15px;
+  }
+  
+  .about-text-bottom {
+    font-size: 15px;
+  }
+
+  #desc-container {
+    width: 70%;
+  }
+}
+
   
 @media only screen and (max-width: 1024px) {
   #desc-container {
@@ -213,7 +227,7 @@
   }
 
   .about-title-text{
-    text-align: center;
+    text-align: left;
   }
 
   #desc-container {
@@ -249,7 +263,7 @@
   
   .about-text-bottom {
   text-align: left;
-  font-size: 17px;
+  font-size: 15px;
   width: 100%;
   margin-top: 2em;
 }

@@ -113,14 +113,14 @@ export default {
 
   .project-container {
     position: relative; 
-    width: 55%;
+    width: 50%;
     aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
   }
 
   .project-container.expanded {
-    width: 55%;
+    width: 50%;
   }
 
   .project-container.animating {
@@ -128,7 +128,7 @@ export default {
   }
 
   .project-container.expanded:not(.animating) {
-    width: 55%;
+    width: 50%;
   }
 
   .project-content {
@@ -229,6 +229,20 @@ export default {
   
   .fullscreen-button:hover {
     opacity: 1;
+  }
+
+  @media (min-width: 1024px) and (max-height: 1080px) and (max-width: 1920px){
+    .video-title{
+      font-size: 25px;
+    }
+
+    .video-tech{
+      font-size: 15px;
+    }
+
+    .video-description {
+      font-size: 15px;
+    }
   }
 
   @media (min-width: 2560px) {

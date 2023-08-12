@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="video-section">
+    <div class="video-name-display">
+      <p>Name {{ currentVideoName }}</p>
+    </div>
     <VideoComponent 
       id="first-video"
       class="project"
@@ -18,7 +21,7 @@
       :is-left="false" 
       src="/videos/Wine.mp4" 
       :description="descriptions['Wine']"
-      :tech="'.Net, nuxt.js, MongoDB, Azure, Figma'"
+      :tech="'.Net, nuxt.js, MongoDB, JWT, BCrypt, Azure, Figma'"
       :title="'Interaktive Weinkarte'"
       :videoname="'Wine'"
       :preview="'/previews/wine.png'"
@@ -148,12 +151,32 @@ export default {
     height: 200px;
   }
 
-  @media (min-width: 1024px) {
+  .video-name-display {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white; 
+    padding: 5px 10px;
+    color: black;
+  }
+  
+  @media (max-width: 1024px) {
+    .video-name-display {
+      display: none;
+    }
+  }
+  
+
+  @media (min-width: 1025px) {
     .project {
       position: relative;
       /*box-shadow: 0 10px 40px rgba(255, 127, 80, 0.3);*/
       transition: transform 0.3s ease;
-      padding: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
   }
   
   .project::before, 
