@@ -147,4 +147,73 @@ export default {
   .spacer{
     height: 200px;
   }
+
+  @media (min-width: 1024px) {
+    .project {
+      position: relative;
+      /*box-shadow: 0 10px 40px rgba(255, 127, 80, 0.3);*/
+      transition: transform 0.3s ease;
+      padding: 20px;
+  }
+  
+  .project::before, 
+  .project::after,
+  .project > div::before,
+  .project > div::after { 
+      content: "";
+      position: absolute;
+      background-color: coral;
+      transition: all 0.5s ease-in-out;
+  }
+  
+  .project::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      width: 0;
+  }
+  
+  .project::after {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      width: 0;
+  }
+  
+  .project > div::before {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 5px;
+      height: 0;
+  }
+  
+  .project > div::after {
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: 5px;
+      height: 0;
+  }
+  
+  .project:hover::before {
+      width: 100%;
+  }
+  
+  .project:hover::after {
+      width: 100%;
+  }
+  
+  .project:hover > div::before {
+      height: 100%;
+  }
+  
+  .project:hover > div::after {
+      height: 100%;
+  }
+  
+  }
+
 </style>
