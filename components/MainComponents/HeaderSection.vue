@@ -34,9 +34,8 @@ export default {
 
 <style>
 *{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 
 .myName{
   height: 100vh;
@@ -46,14 +45,12 @@ export default {
 .title-name{
   font-size: 120px;
   font-weight: bold;
-  font-family: sans-serif;
   margin-top: 10%;
 }
 
 .title-desc{
   font-size: 40px;
   font-weight: bold;
-  font-family: sans-serif;
 }
 
 .navigation{
@@ -64,7 +61,6 @@ export default {
 
 .title-txt {
   font-size: 25px;
-  font-family: sans-serif;
   margin: 0 10px;
   text-decoration: none; 
   color: inherit;
