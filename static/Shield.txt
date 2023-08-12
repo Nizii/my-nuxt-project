@@ -4,4 +4,3 @@ Das Entwicklerteam bestand aus drei Informatikern.
 Ich war u.a. für die Wurf- und Abwerbewegung der Schilder verantwortlich. 
 Die Welt ist aus Hexagonen aufgebaut und zeichnet sich durch ihre Einzigartigkeit aus, 
 da sie durch einen generativen Prozess erschaffen wird.
-Entwicklungszeitraum 6 Wochen.

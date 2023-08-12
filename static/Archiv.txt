@@ -2,4 +2,3 @@ Onlineausstellung für das Stadtmuseum Aarau während des Lockdowns.
 Unser Team bestand aus 2 Designern und 2 Informatikern (Frontend und Backend).
 Das Modul umfasste auch Gespräche mit dem Kunden sowie die Erfassung der Anforderungen.
 Ich habe das Backend mit .Net und Azure entwickelt. Als Datenbank wurde MongoDB verwendet.
-Der Entwicklungszeitraum betrug 6 Wochen.

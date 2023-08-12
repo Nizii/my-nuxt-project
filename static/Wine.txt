@@ -7,5 +7,4 @@ Zudem habe ich mit JWT Tokens und BCrypt gearbeitet.
 Die Berechnung der Übereinstimmung zwischen dem Geschmacksprofil des Nutzers und 
 dem des Weins wurde mit der Formel der euklidischen Distanz durchgeführt. 
 Dabei wurde die Distanz der Punkte von zwei Arrays berechnet, aufsummiert und als Prozentwert ausgegeben.
-Entwicklungszeitraum 12 Wochen. 
 Stimme im Video Tino Freiburghaus (Designer).

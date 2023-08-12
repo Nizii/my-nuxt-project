@@ -218,6 +218,8 @@
 
   #desc-container {
     margin-top: 35px;
+    width: 100%;
+    padding: 0;
   }
 
   .about-btn {
@@ -235,15 +237,13 @@
 
   .about-text {
     font-size: 17px;
-    width: 95%;
+    width: 100%;
     margin-right: 0;
     text-align: left;
   }
 
   .foto {
-    margin: 20px auto;
-    width: 95%; 
-    max-width: 300px;
+    width: 100%; 
   }
   
   .about-text-bottom {

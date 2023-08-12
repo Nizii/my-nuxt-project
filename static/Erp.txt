@@ -5,4 +5,3 @@ einen Prototypen und die Implementierung einer ersten funktionalen Version.
 Das System (Version 2) befindet sich noch in der Entwicklung. Ich arbeite alleine daran. 
 Das Design habe ich mit Figma erstellt. Das Frontend habe ich mit Vue.js und 
 das Backend mit .Net entwickelt. Als Datenbank verwende ich MySQL. 
-Entwicklungszeitraum 12 Wochen.
