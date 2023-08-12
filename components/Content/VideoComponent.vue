@@ -8,7 +8,7 @@
       <div class="video-title" :class="{'fade-in': !isAnimating}"><b>{{ title }}</b></div>
       <div class="video-tech" :class="{'fade-in': !isAnimating}">{{ tech }}</div>
       <div class="video-wrapper">
-        <video ref="video" @play="videoPlayed" @pause="videoPaused" loop>
+        <video ref="video" @play="videoPlayed" @pause="videoPaused" loop :poster="preview">
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
@@ -23,7 +23,7 @@
 <script>
 import axios from 'axios';
 export default {
-  props: ['src', 'isLeft', 'description', 'title', 'tech', 'videoname'],
+  props: ['src', 'isLeft', 'description', 'title', 'tech', 'videoname', 'preview'],
   data() {
     return {
       isExpanded: false,

@@ -9,6 +9,7 @@
       :tech="'.Net, Vue.js, MongoDB, Azure, Figma'"
       :title="'Web'"
       :videoname="'Bildarchiv'"
+      :preview="'/previews/archiv.png'"
       />
     <Spacer/>
 
@@ -20,6 +21,7 @@
       :tech="'.Net, nuxt.js, MongoDB, Azure, Figma'"
       :title="'Web'"
       :videoname="'Wine'"
+      :preview="'/previews/wine.png'"
       />
     <Spacer/>
 
@@ -31,6 +33,7 @@
       :tech="'.Net, Vue.js, MySQL, Azure, Figma'"
       :title="'Web'"
       :videoname="'Erp'"
+      :preview="'/previews/erp.png'"
       />
     <Spacer/>  
 
@@ -42,6 +45,7 @@
       :tech="'Python, MySQL'"
       :title="'Trading'"
       :videoname="'Bot'"
+      :preview="'/previews/bot.png'"
       />
     <Spacer/>
 
@@ -53,6 +57,7 @@
       :tech="'Figma'"
       :title="'UX'"
       :videoname="'Ux'"
+      :preview="'/previews/ux.png'"
       />
     <Spacer/>
 
@@ -64,6 +69,7 @@
       :tech="'C#, Unity'"
       :title="'Game'"
       :videoname="'Shield'"
+      :preview="'/previews/shield.png'"
       />
     <Spacer/>
 
@@ -75,6 +81,7 @@
       :tech="'C#, Unity'"
       :title="'Game'"
       :videoname="'Supersonic'"
+      :preview="'/previews/supersonic.png'"
       />
     <Spacer/>
 
@@ -86,6 +93,7 @@
       :tech="'C#, Unity'"
       :title="'Game'"
       :videoname="'Flametrain'"
+      :preview="'/previews/flame.png'"
       />
     <Spacer/>
 
@@ -93,8 +101,8 @@
 </template>
 
 <script>
-import VideoComponent from '../Content/VideoComponent.vue'
-import Spacer from '../Content/Spacer.vue'
+import VideoComponent from '~/components/Content/VideoComponent.vue'
+import Spacer from '~/components/Content/Spacer.vue'
 
 export default {
   components: {
