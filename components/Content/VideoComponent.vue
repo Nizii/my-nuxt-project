@@ -41,11 +41,21 @@ export default {
     }
     this.$root.$on('videoPlaying', this.pauseVideo);
     this.$refs.video.volume = 0.5;
+    window.addEventListener('scroll', this.handleScroll);
+
   },
   beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
     this.$root.$off('videoPlaying', this.pauseVideo);
   },
   methods: {
+    handleScroll() {
+        const rect = this.$el.getBoundingClientRect();
+        const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
+        if (isInViewport) {
+            this.$emit('videoInView', this.videoname);
+        }
+    },
     toggleVideo() {
       if (this.isPaused) {
         this.playVideo();

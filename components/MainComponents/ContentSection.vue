@@ -1,7 +1,7 @@
 <template>
-  <div class="video-section">
+  <div class="video-section" ref="videoSection">
     <div class="video-name-display">
-      <p>Name {{ currentVideoName }}</p>
+      <p v-if="currentVideoName">{{ currentVideoName }}</p>
     </div>
     <VideoComponent 
       id="first-video"
@@ -13,6 +13,9 @@
       :title="'Stadtmuseum  Aarau'"
       :videoname="'Bildarchiv'"
       :preview="'/previews/archiv.png'"
+      :data-videoname="'Web'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>
 
@@ -25,6 +28,9 @@
       :title="'Interaktive Weinkarte'"
       :videoname="'Wine'"
       :preview="'/previews/wine.png'"
+      :data-videoname="'Mobile Web App'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>
 
@@ -37,6 +43,9 @@
       :title="'ERP System'"
       :videoname="'Erp'"
       :preview="'/previews/erp.png'"
+      :data-videoname="'Web'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>  
 
@@ -49,6 +58,9 @@
       :title="'Trading Bitcoin Bot'"
       :videoname="'Bot'"
       :preview="'/previews/bot.png'"
+      :data-videoname="'Web'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>
 
@@ -61,6 +73,9 @@
       :title="'UX Projekt: Aufklärung'"
       :videoname="'Ux'"
       :preview="'/previews/ux.png'"
+      :data-videoname="'UX'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>
 
@@ -73,6 +88,9 @@
       :title="'Shield Hero VR'"
       :videoname="'Shield'"
       :preview="'/previews/shield.png'"
+      :data-videoname="'Game'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>
 
@@ -85,6 +103,9 @@
       :title="'Supersonic Bridge Racer'"
       :videoname="'Supersonic'"
       :preview="'/previews/supersonic.png'"
+      :data-videoname="'Game'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>
 
@@ -97,6 +118,9 @@
       :title="'Flametrain 2D'"
       :videoname="'Flametrain'"
       :preview="'/previews/flame.png'"
+      :data-videoname="'Game'"
+      @videoInView="setCurrentVideoName"
+
       />
     <Spacer/>
 
@@ -114,6 +138,7 @@ export default {
   },
   data() {
     return {
+      currentVideoName: '',
       descriptions: {
       'Wine': '',
       'Erp': '',
@@ -130,6 +155,9 @@ export default {
     this.loadDescriptions();
   },
   methods: {
+    setCurrentVideoName(videoName) {
+      this.currentVideoName = videoName;
+    },
     async loadDescriptions() {
       const files = ['Wine', 'Erp', 'Archiv', 'Flame', 'Supersonic', 'Shield', 'Bot', 'Ux'];
       for (const file of files) {
@@ -141,8 +169,37 @@ export default {
         const text = await response.text();
         this.descriptions[file] = text;
       }
+    },
+    updateCurrentVideo() {
+      const videos = this.$refs.videoSection.querySelectorAll('.project');
+      let videoInView = false; // Variable hinzugefügt, um zu prüfen, ob ein Video im Viewport ist
+
+      for (let video of videos) {
+        const rect = video.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) { 
+          // Dieses Video ist aktuell im Viewport.
+          this.currentVideoName = video.getAttribute('data-videoname');
+          videoInView = true; // Video ist im Viewport
+          break; 
+        }
+      }
+
+      // Wenn kein Video im Viewport ist, setzen Sie currentVideoName auf einen leeren String
+      if (!videoInView) {
+        this.currentVideoName = '';
+      }
     }
+
   },
+  mounted() {
+    this.loadDescriptions();
+    window.addEventListener('scroll', this.updateCurrentVideo);
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.updateCurrentVideo);
+  },
+
 }
 </script>
 

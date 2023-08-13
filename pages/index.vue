@@ -3,6 +3,8 @@
     <HeaderSection/>
     <ContentSection/>
     <BottomSection/>
+    <spacer/>
+    <spacer/>
   </div>
 </template>
 
