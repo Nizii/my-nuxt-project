@@ -17,7 +17,7 @@
       <div 
       class="video-title" 
       :class="{'fade-in': !isAnimating}"
-      :style="{ color: isMobile ? titelcolor : 'black' }"
+      :style="{ titelcolor : 'black' }"
       ><b>{{ title }}</b></div>
       
       <div class="video-wrapper">

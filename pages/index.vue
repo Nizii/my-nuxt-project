@@ -26,6 +26,7 @@ export default {
   },
   data() {
     return {
+      isMobile: false,
       progressBarHeight: '0%',
       currentCategoryColor: 'rgb(255, 147, 108)'
     };
@@ -36,6 +37,9 @@ export default {
   beforeDestroy() {
     window.removeEventListener('scroll', this.updateProgressBar);
   },
+  created(){
+    this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  },
   methods: {
     updateProgressBar() {
       const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -45,13 +49,25 @@ export default {
     updateCategoryColor(videoName) {
       switch (videoName) {
         case 'Web':
-          this.currentCategoryColor = '#FFA4A2';
+          if(isMobile){
+            this.currentCategoryColor = 'coral';
+          } else {
+            this.currentCategoryColor = '#FFA4A2';
+          }
           break;
         case 'UX':
-          this.currentCategoryColor = '#D7A9E3';
+          if(isMobile){
+            this.currentCategoryColor = 'violet';
+          } else {
+            this.currentCategoryColor = '#D7A9E3';
+          }
           break;
         case 'Game':
-          this.currentCategoryColor = '#A8D5BA';
+        if(isMobile){
+            this.currentCategoryColor = 'green';
+          } else {
+            this.currentCategoryColor = '#A8D5BA';
+          }
           break;
         default:
           this.currentCategoryColor = 'rgb(255, 147, 108)'; // Default color
