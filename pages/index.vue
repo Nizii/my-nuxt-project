@@ -49,7 +49,7 @@ export default {
           if (window.innerWidth <= 1024) {
             this.currentCategoryColor = 'coral';
           } else {
-            this.currentCategoryColor = '#FFA4A2';
+            this.currentCategoryColor = 'rgb(253, 166, 134)';
           }
           break;
         case 'UX':

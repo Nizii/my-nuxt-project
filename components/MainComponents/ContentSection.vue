@@ -15,7 +15,7 @@
       :preview="'/previews/archiv.png'"
       :datavideoname="'Web'"
       @videoInView="setCurrentVideoName('Web')"
-      :color="'#FFA4A2'"
+      :color="'rgb(253, 166, 134)'"
       :titelcolor="'coral'"
       />
     <Spacer/>
@@ -31,7 +31,7 @@
       :preview="'/previews/wine.png'"
       :datavideoname="'Web'"
       @videoInView="setCurrentVideoName('Web')"
-      :color="'#FFA4A2'"
+      :color="'rgb(253, 166, 134)'"
       :titelcolor="'coral'"
       />
     <Spacer/>
@@ -47,7 +47,7 @@
       :preview="'/previews/erp.png'"
       :datavideoname="'Web'"
       @videoInView="setCurrentVideoName('Web')"
-      :color="'#FFA4A2'"
+      :color="'rgb(253, 166, 134)'"
       :titelcolor="'coral'"
       />
     <Spacer/>  
@@ -63,7 +63,7 @@
       :preview="'/previews/bot.png'"
       :datavideoname="'Web'"
       @videoInView="setCurrentVideoName('Web')"
-      :color="'#FFA4A2'"
+      :color="'rgb(253, 166, 134)'"
       :titelcolor="'coral'"
       />
     <Spacer/>
@@ -230,7 +230,7 @@ export default {
     getVideoNameDisplayColor() {
       switch (this.currentVideoName) {
         case 'Web':
-          return '#FFA4A2';
+          return 'rgb(253, 166, 134)';
         case 'UX':
           return '#D7A9E3';
         case 'Game':
