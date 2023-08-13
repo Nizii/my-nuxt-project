@@ -8,8 +8,7 @@
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
       
       <div 
-      class="video-title" 
-      v-if="isMobile" 
+      class="category-title" 
       :style="{ color: titelcolor }">
         {{ datavideoname }}
       </div>
@@ -227,6 +226,14 @@ export default {
     text-align: left;
   }
 
+  .category-title{
+    display: none;
+    width: 100%;
+    font-size: 40px;
+    text-align: left;
+    font-weight: bold;
+  }
+
   .fade-in {
     opacity: 1;
   }
@@ -265,6 +272,10 @@ export default {
       font-size: 25px;
     }
 
+    .category-title{
+      display: none;
+    }
+
     .video-tech{
       font-size: 15px;
     }
@@ -277,6 +288,10 @@ export default {
   @media (min-width: 2560px) {
     .project-container {
       width: 30%;
+    }
+
+    .category-title{
+      display: none;
     }
   }
 
@@ -297,6 +312,10 @@ export default {
   */
 
   @media only screen and (max-width: 1024px) {
+    .category-title{
+      display:block;
+    }
+
     .video-title{
       width: 100%;
       color: black;
