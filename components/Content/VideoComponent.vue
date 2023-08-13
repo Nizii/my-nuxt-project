@@ -302,6 +302,7 @@ export default {
       color: black;
       font-size: 50px;
       text-align: left;
+      font-weight: bold;
     }
 
     .video-tech{
@@ -353,6 +354,7 @@ export default {
   @media only screen and (max-width: 600px) {
 
     .video-title{
+      font-weight: bold;
       width: 100%;
       color: black;
       font-size: 25px;
