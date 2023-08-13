@@ -35,7 +35,7 @@
 <script>
 import axios from 'axios';
 export default {
-  props: ['src', 'isLeft', 'description', 'title', 'tech', 'videoname', 'preview', 'color', 'titelcolor'],
+  props: ['src', 'isLeft', 'description', 'title', 'tech', 'videoname', 'preview', 'color', 'titelcolor', 'datavideoname'],
   data() {
     return {
       isExpanded: false,
