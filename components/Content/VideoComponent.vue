@@ -6,6 +6,13 @@
     :style="{ backgroundColor: color }"
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
+      
+      <div 
+      v-if="isMobile" 
+      :style="{ color: titelcolor }">
+        {{ datavideoname }}
+      </div>
+
       <div class="video-title" 
       :class="{'fade-in': !isAnimating}"
       :style="{ color: isMobile ? titelcolor : 'black' }"
@@ -17,7 +24,7 @@
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
         <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
-        <img v-if="isMobile" @click="toggleFullscreen" src="~/static/icons/fullscreen.png"  class="fullscreen-button"/>
+        <img @click="toggleFullscreen" src="~/static/icons/fullscreen.png"  class="fullscreen-button"/>
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
       <div class="video-tech" :class="{'fade-in': !isAnimating}">{{ tech }}</div>

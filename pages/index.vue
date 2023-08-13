@@ -66,14 +66,14 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
-  width: 20px;  
+  width: 30px;  
   z-index: 1000;
   transition: height 0.2s ease;
 }
 @media (max-width: 1024px) {
   .scroll-progress-bar {
     bottom: 0;
-    width: 5px;  
+    width: 8px;  
   }
 }
 </style>
