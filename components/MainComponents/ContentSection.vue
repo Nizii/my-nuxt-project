@@ -61,7 +61,7 @@
       :title="'Trading Bitcoin Bot'"
       :videoname="'Bot'"
       :preview="'/previews/bot.png'"
-      :data-videoname="'Web'"
+      :datavideoname="'Web'"
       @videoInView="setCurrentVideoName('Web')"
       :color="'#FFA4A2'"
       :titelcolor="'coral'"
