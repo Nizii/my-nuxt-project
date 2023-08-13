@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div class="scroll-progress-bar" :style="{ height: progressBarHeight }"></div>
-    <HeaderSection/>
-    <ContentSection/>
-    <BottomSection/>
+    <div class="scroll-progress-bar" :style="{ height: progressBarHeight, backgroundColor: currentCategoryColor }"></div>
+    <HeaderSection ref="headerSection"/>
+    <ContentSection ref="contentSection" @update-category-color="updateCategoryColor"/>
+    <BottomSection ref="bottomSection"/>
     <spacer/>
     <spacer/>
   </div>
 </template>
+
 
 <script>
 import HeaderSection from '~/components/MainComponents/HeaderSection.vue';
@@ -26,6 +27,7 @@ export default {
   data() {
     return {
       progressBarHeight: '0%',
+      currentCategoryColor: 'rgb(255, 147, 108)'
     };
   },
   mounted() {
@@ -39,7 +41,22 @@ export default {
       const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrollPosition = window.scrollY;
       this.progressBarHeight = `${(scrollPosition / totalHeight) * 100}%`;
-    }
+    },
+    updateCategoryColor(videoName) {
+      switch (videoName) {
+        case 'Web':
+          this.currentCategoryColor = '#FFA4A2';
+          break;
+        case 'UX':
+          this.currentCategoryColor = '#D7A9E3';
+          break;
+        case 'Game':
+          this.currentCategoryColor = '#A8D5BA';
+          break;
+        default:
+          this.currentCategoryColor = 'rgb(255, 147, 108)'; // Default color
+      }
+    },
   }
 }
 </script>
@@ -47,10 +64,9 @@ export default {
 <style>
 .scroll-progress-bar {
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 20px;  
-  background-color: rgb(255, 147, 108);
   z-index: 1000;
   transition: height 0.2s ease;
 }
@@ -58,7 +74,6 @@ export default {
   .scroll-progress-bar {
     bottom: 0;
     width: 5px;  
-    background-color: rgb(255, 147, 108);
   }
 }
 </style>

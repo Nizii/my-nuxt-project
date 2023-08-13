@@ -14,8 +14,9 @@
       :videoname="'Bildarchiv'"
       :preview="'/previews/archiv.png'"
       :data-videoname="'Web'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('Web')"
+      :color="'#FFA4A2'"
+      :titelcolor="'coral'"
       />
     <Spacer/>
 
@@ -29,8 +30,9 @@
       :videoname="'Wine'"
       :preview="'/previews/wine.png'"
       :data-videoname="'Web'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('Web')"
+      :color="'#FFA4A2'"
+      :titelcolor="'coral'"
       />
     <Spacer/>
 
@@ -44,8 +46,9 @@
       :videoname="'Erp'"
       :preview="'/previews/erp.png'"
       :data-videoname="'Web'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('Web')"
+      :color="'#FFA4A2'"
+      :titelcolor="'coral'"
       />
     <Spacer/>  
 
@@ -59,8 +62,9 @@
       :videoname="'Bot'"
       :preview="'/previews/bot.png'"
       :data-videoname="'Web'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('Web')"
+      :color="'#FFA4A2'"
+      :titelcolor="'coral'"
       />
     <Spacer/>
 
@@ -74,8 +78,9 @@
       :videoname="'Ux'"
       :preview="'/previews/ux.png'"
       :data-videoname="'UX'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('UX')"
+      :color="'#D7A9E3'"
+      :titelcolor="'violet'"
       />
     <Spacer/>
 
@@ -89,8 +94,9 @@
       :videoname="'Shield'"
       :preview="'/previews/shield.png'"
       :data-videoname="'Game'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('Game')"
+      :color="'#A8D5BA'"
+      :titelcolor="'green'"
       />
     <Spacer/>
 
@@ -104,8 +110,9 @@
       :videoname="'Supersonic'"
       :preview="'/previews/supersonic.png'"
       :data-videoname="'Game'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('Game')"
+      :color="'#A8D5BA'"
+      :titelcolor="'green'"
       />
     <Spacer/>
 
@@ -119,8 +126,9 @@
       :videoname="'Flametrain'"
       :preview="'/previews/flame.png'"
       :data-videoname="'Game'"
-      @videoInView="setCurrentVideoName"
-
+      @videoInView="setCurrentVideoName('Game')"
+      :color="'#A8D5BA'"
+      :titelcolor="'green'"
       />
     <Spacer/>
 
@@ -154,8 +162,14 @@ export default {
   created() {
     this.loadDescriptions();
   },
+  watch: {
+      currentVideoName(newVal) {
+          this.$emit('update-category-color', newVal);
+      }
+  },
   methods: {
     setCurrentVideoName(videoName) {
+      this.$emit('update-category-color', videoName);
       this.currentVideoName = videoName;
     },
     async loadDescriptions() {
@@ -170,31 +184,57 @@ export default {
         this.descriptions[file] = text;
       }
     },
-    updateCurrentVideo() {
-      const videos = this.$refs.videoSection.querySelectorAll('.project');
-      let videoInView = false;
+    updateFirstVideo() {
+      const firstVideo = this.$refs.videoSection.querySelector('#first-video');
+      const rect = firstVideo.getBoundingClientRect();
 
-      for (let video of videos) {
+      if (rect.top >= 0 && rect.top <= window.innerHeight) {
+        this.currentVideoName = 'Web';
+        return true;
+      }
+      return false;
+    },
+    updateCurrentVideo() {
+      if (this.updateFirstVideo()) return;
+
+      const videos = this.$refs.videoSection.querySelectorAll('.project:not(#first-video)'); 
+      let newVideoName = null;
+
+      for (let i = 0; i < videos.length; i++) {
+        const video = videos[i];
         const rect = video.getBoundingClientRect();
-        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) { 
-          this.currentVideoName = video.getAttribute('data-videoname');
-          videoInView = true; 
-          break; 
+
+        if (rect.top >= 0 && rect.top <= window.innerHeight) {
+          newVideoName = video.getAttribute('data-videoname');
+          break;
         }
       }
 
-      if (!videoInView) {
+      // Überprüfen Sie das Ende des letzten Videos
+      const lastVideoRect = videos[videos.length - 1].getBoundingClientRect();
+      if (lastVideoRect.bottom <= 0) {
         this.currentVideoName = '';
+        return;
+      }
+
+      const headerRect = this.$parent.$refs.headerSection.$el.getBoundingClientRect();
+      if (headerRect.bottom > 0) {
+        this.currentVideoName = '';
+      } else if (newVideoName) {
+        this.currentVideoName = newVideoName;
       }
     },
+
+
+
     getVideoNameDisplayColor() {
       switch (this.currentVideoName) {
         case 'Web':
-          return 'coral';
+          return '#FFA4A2';
         case 'UX':
-          return 'violet';
+          return '#D7A9E3';
         case 'Game':
-          return 'green';
+          return '#A8D5BA';
         default:
           return 'black';// Standardfarbe
       }
@@ -215,8 +255,11 @@ export default {
 
 <style>
 
+.video-section{
+}
+
 .video-name-display{
-  margin-left: 5%;
+  margin-left: 3%;
   font-size: 50px;
   font-weight: bold;
 }
@@ -243,9 +286,9 @@ export default {
 
 
 @media (min-width: 1025px) {
+  /*
   .project {
     position: relative;
-    /*box-shadow: 0 10px 40px rgba(255, 127, 80, 0.3);*/
     transition: transform 0.3s ease;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -310,6 +353,7 @@ export default {
   .project:hover > div::after {
       height: 100%;
   }
+  */
   
 }
 
@@ -329,6 +373,6 @@ export default {
   color: violet;
 }
 .video-name-display[color="green"] {
-  color: green;
+  color: rgb(141, 255, 141);
 }
 </style>

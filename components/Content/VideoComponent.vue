@@ -3,9 +3,13 @@
     class="project-container" 
     @click="toggleVideo"
     :class="{'expanded': isMobile ? false : isExpanded}"
+    :style="{ backgroundColor: color }"
   >
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
-      <div class="video-title" :class="{'fade-in': !isAnimating}"><b>{{ title }}</b></div>
+      <div class="video-title" 
+      :class="{'fade-in': !isAnimating}"
+      :style="{ color: isMobile ? titelcolor : 'black' }"
+      ><b>{{ title }}</b></div>
       
       <div class="video-wrapper">
         <video ref="video" @play="videoPlayed" @pause="videoPaused" loop :poster="preview">
@@ -24,13 +28,13 @@
 <script>
 import axios from 'axios';
 export default {
-  props: ['src', 'isLeft', 'description', 'title', 'tech', 'videoname', 'preview'],
+  props: ['src', 'isLeft', 'description', 'title', 'tech', 'videoname', 'preview', 'color', 'titelcolor'],
   data() {
     return {
       isExpanded: false,
       isPaused: true,
       isAnimating: true,
-      isMobile: true
+      isMobile: false
     };
   },
   mounted() {
@@ -54,6 +58,7 @@ export default {
         const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
         if (isInViewport) {
             this.$emit('videoInView', this.videoname);
+            //.$emit('scrollBarChangeColor', this.videoname);
         }
     },
     toggleVideo() {
@@ -109,7 +114,7 @@ export default {
     }
   },
   created() {
-    console.log('Videoname:', this.videoname);
+    this.isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
   },
 }
 </script>
@@ -127,6 +132,11 @@ export default {
     aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10px;
   }
 
   .project-container.expanded {
@@ -261,6 +271,22 @@ export default {
     }
   }
 
+  /*
+  @media (min-width: 1080px) {
+    .video-title{
+      color: white;
+    }
+
+    .video-tech{
+      color: white;
+    }
+
+    .video-description {
+      color: white;
+    }
+  }
+  */
+
   @media only screen and (max-width: 1024px) {
     .video-title{
       width: 100%;
@@ -287,7 +313,11 @@ export default {
     .project-container,
     .project-container.expanded {
       width: 100%;
+      padding: 0;
+      border-radius: 0px;
+      background-color: white !important;
     }
+
 
     .project-content {
       flex-direction: column;
