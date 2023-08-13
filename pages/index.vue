@@ -49,21 +49,21 @@ export default {
     updateCategoryColor(videoName) {
       switch (videoName) {
         case 'Web':
-          if(isMobile){
+          if(this.isMobile){
             this.currentCategoryColor = 'coral';
           } else {
             this.currentCategoryColor = '#FFA4A2';
           }
           break;
         case 'UX':
-          if(isMobile){
+          if(this.isMobile){
             this.currentCategoryColor = 'violet';
           } else {
             this.currentCategoryColor = '#D7A9E3';
           }
           break;
         case 'Game':
-        if(isMobile){
+        if(this.isMobile){
             this.currentCategoryColor = 'green';
           } else {
             this.currentCategoryColor = '#A8D5BA';
