@@ -8,12 +8,14 @@
     <div class="project-content" :class="{'slide-from-left': isLeft, 'slide-from-right': !isLeft}">
       
       <div 
+      class="video-title" 
       v-if="isMobile" 
       :style="{ color: titelcolor }">
         {{ datavideoname }}
       </div>
 
-      <div class="video-title" 
+      <div 
+      class="video-title" 
       :class="{'fade-in': !isAnimating}"
       :style="{ color: isMobile ? titelcolor : 'black' }"
       ><b>{{ title }}</b></div>
