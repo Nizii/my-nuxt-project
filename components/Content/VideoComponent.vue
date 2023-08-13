@@ -140,8 +140,8 @@ export default {
     aspect-ratio: auto;
     margin: auto;
     transition: all 0.5s ease;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
     padding-bottom: 20px;
     padding-top: 20px;
     border-radius: 10px;
