@@ -1,6 +1,6 @@
 <template>
   <div class="video-section" ref="videoSection">
-    <div class="video-name-display">
+    <div class="video-name-display" :style="{ color: getVideoNameDisplayColor() }">
       <p v-if="currentVideoName">{{ currentVideoName }}</p>
     </div>
     <VideoComponent 
@@ -28,7 +28,7 @@
       :title="'Interaktive Weinkarte'"
       :videoname="'Wine'"
       :preview="'/previews/wine.png'"
-      :data-videoname="'Mobile Web App'"
+      :data-videoname="'Web'"
       @videoInView="setCurrentVideoName"
 
       />
@@ -172,23 +172,33 @@ export default {
     },
     updateCurrentVideo() {
       const videos = this.$refs.videoSection.querySelectorAll('.project');
-      let videoInView = false; // Variable hinzugefügt, um zu prüfen, ob ein Video im Viewport ist
+      let videoInView = false;
 
       for (let video of videos) {
         const rect = video.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) { 
-          // Dieses Video ist aktuell im Viewport.
+        if (rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2) { 
           this.currentVideoName = video.getAttribute('data-videoname');
-          videoInView = true; // Video ist im Viewport
+          videoInView = true; 
           break; 
         }
       }
 
-      // Wenn kein Video im Viewport ist, setzen Sie currentVideoName auf einen leeren String
       if (!videoInView) {
         this.currentVideoName = '';
       }
-    }
+    },
+    getVideoNameDisplayColor() {
+      switch (this.currentVideoName) {
+        case 'Web':
+          return 'coral';
+        case 'UX':
+          return 'violet';
+        case 'Game':
+          return 'green';
+        default:
+          return 'black';// Standardfarbe
+      }
+    },
 
   },
   mounted() {
@@ -204,36 +214,43 @@ export default {
 </script>
 
 <style>
-  .spacer{
-    height: 200px;
-  }
 
+.video-name-display{
+  margin-left: 5%;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.spacer{
+  height: 200px;
+}
+
+.video-name-display {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white; 
+  padding: 5px 10px;
+  color: black;
+}
+
+@media (max-width: 1024px) {
   .video-name-display {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: white; 
-    padding: 5px 10px;
-    color: black;
+    display: none;
   }
-  
-  @media (max-width: 1024px) {
-    .video-name-display {
-      display: none;
-    }
-  }
-  
+}
 
-  @media (min-width: 1025px) {
-    .project {
-      position: relative;
-      /*box-shadow: 0 10px 40px rgba(255, 127, 80, 0.3);*/
-      transition: transform 0.3s ease;
-      padding-top: 20px;
-      padding-bottom: 20px;
-      padding-left: 30px;
-      padding-right: 30px;
+
+@media (min-width: 1025px) {
+  .project {
+    position: relative;
+    /*box-shadow: 0 10px 40px rgba(255, 127, 80, 0.3);*/
+    transition: transform 0.3s ease;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   
   .project::before, 
@@ -294,6 +311,24 @@ export default {
       height: 100%;
   }
   
-  }
+}
 
+.video-name-display {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  padding: 5px 10px;
+  color: black;
+}
+.video-name-display[color="coral"] {
+  color: coral;
+}
+.video-name-display[color="violet"] {
+  color: violet;
+}
+.video-name-display[color="green"] {
+  color: green;
+}
 </style>
