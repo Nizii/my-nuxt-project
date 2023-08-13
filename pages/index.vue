@@ -50,7 +50,7 @@ export default {
   bottom: 0;
   left: 0;
   width: 20px;  
-  background-color: #007BFF;
+  background-color: rgb(255, 147, 108);
   z-index: 1000;
   transition: height 0.2s ease;
 }
