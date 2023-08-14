@@ -255,7 +255,8 @@ export default {
 
 <style>
 
-.video-section{
+*{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .video-name-display{

@@ -38,19 +38,17 @@
 
 <style>
   *{
-    font-family: sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   .about-title-text{
     font-size: 40px;
     font-weight: bold;
-    font-family: sans-serif;
   }
 
   .about-btn {
     text-align: center;
     font-size: 25px;
-    font-family: sans-serif;
     text-decoration: none; 
     color: inherit;
     color: rgb(252, 117, 68);

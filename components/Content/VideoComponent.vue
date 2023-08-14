@@ -131,7 +131,7 @@ export default {
 
 <style>
   *{
-    font-family: sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
   .project-container {
