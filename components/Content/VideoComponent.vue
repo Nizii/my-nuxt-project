@@ -224,6 +224,7 @@ export default {
     color: black;
     font-size: 40px;
     text-align: left;
+    padding-bottom: 10px;
   }
 
   .category-title{
@@ -232,6 +233,7 @@ export default {
     font-size: 40px;
     text-align: left;
     font-weight: bold;
+    
   }
 
   .fade-in {
