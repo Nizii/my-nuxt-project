@@ -1,7 +1,6 @@
 <template>
   <div 
     class="project-container" 
-    @click="toggleVideo"
     :class="{'expanded': isMobile ? false : isExpanded}"
     :style="{ backgroundColor: color }"
   >
@@ -20,7 +19,7 @@
       ><b>{{ title }}</b></div>
       
       <div class="video-wrapper">
-        <video ref="video" @play="videoPlayed" @pause="videoPaused" loop :poster="preview">
+        <video ref="video" @play="videoPlayed" @pause="videoPaused" loop :poster="preview" @click="toggleVideo">
           <source :src="src" type="video/mp4">
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
@@ -32,6 +31,7 @@
     </div>
   </div>
 </template>
+
 
 <script>
 import axios from 'axios';

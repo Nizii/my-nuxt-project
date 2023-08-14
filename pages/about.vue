@@ -11,16 +11,19 @@
             Über mich
           </p>
           <p>
-            Mein Name ist Nizam Can Özdemir, und ich bin 35 Jahre alt.
+            Mein Name ist Nizam Özdemir, und ich bin 35 Jahre alt.
             Mit dem erfolgreichen Absolvieren meines Studiums bin ich meinem Traumberuf als Softwareentwickler ein Stück näher gekommen.
             Programmieren habe ich vor dem Studium in privaten Projekten gelernt und möchte dies nun auch beruflich tun.
-          </p>
-            
+            Während meines Studiums habe ich an einer Reihe von Projekten teilgenommen, von denen Sie einige auf meiner Webseite finden. 
+            In meiner Freizeit bin ich leidenschaftlicher Fußballspieler im Verein und koche sehr gerne.
+          </p>    
           <p>
-            In meinem Studium habe ich vielfältige Projekte durchgeführt; einige finden Sie unten auf meiner Seite.
-            Neben Prototyping habe ich auch fertige Produkte erstellt, wobei mein Schwerpunkt im Frontend mit JavaScript und im Backend mit .Net lag.  
-            Die Berücksichtigung von Design Patterns und Clean-Code-Prinzipien wie zum Beispiel SOLID ist für mich selbstverständlich. 
-          </p>        
+            Das Wichtigste für mich bei der Arbeit ist ein respektvoller und teamorientierter Umgang miteinander. 
+            In meinen Berufsjahren und auch in anderen Bereichen meines privaten Lebens habe ich stets das Motto vertreten: 
+            «Im Miteinander liegt Kraft, wo jede Frage ihren Raum hat». 
+            Aus meiner Sicht können so dauerhaft gute Leistungen entstehen. 
+            Diese Prinzipien scheinen sich mit denen Ihres Teams zu decken.
+          </p>    
           <p class="about-text-bottom">
           Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
           </p>
