@@ -24,6 +24,7 @@
           Ihr Browser unterstützt das Video-Tag nicht.
         </video>
         <img v-if="isPaused" @click="playVideo" class="play-button" src="~/static/icons/play.png" alt="Play Icon" />
+        <img v-if="showMuteButton && !isPaused" @click="toggleMute" class="mute-button" src="~/static/icons/mute.png" alt="Mute Icon" />        
         <img @click="toggleFullscreen" src="~/static/icons/fullscreen.png"  class="fullscreen-button"/>
       </div>
       <div class="video-description" :class="{'fade-in': !isAnimating}">{{ description }}</div>
@@ -42,7 +43,10 @@ export default {
       isExpanded: false,
       isPaused: true,
       isAnimating: true,
-      isMobile: false
+      isMobile: false,
+      isMute: true,
+      showMuteButton: false,
+      muteButtonPressed: false 
     };
   },
   mounted() {
@@ -76,6 +80,13 @@ export default {
         this.pauseVideo();
       }
     },
+
+    toggleMute() {
+      this.isMute = !this.isMute;
+      this.$refs.video.muted = this.isMute;
+      this.showMuteButton = false;
+      this.muteButtonPressed = true; 
+    },
     toggleFullscreen() {
       if (this.$refs.video.requestFullscreen) {
         this.$refs.video.requestFullscreen();
@@ -89,26 +100,33 @@ export default {
     },
     playVideo(event) {
       const vm = this;
+      
       if (event) event.stopPropagation();
-
+      this.$refs.video.muted = this.isMute;
       vm.$root.$emit('videoPlaying');
+      
       vm.$refs.video.play().then(() => {
         vm.isPaused = false;
 
+        if (!vm.muteButtonPressed) {
+          vm.showMuteButton = true;
+        }
+
         axios.post('/.netlify/functions/increment', 
-        JSON.stringify({ 'videoname': vm.videoname }),
-        { headers: { 'Content-Type': 'application/json' }})
-          .then(response => {
-            console.log(response.data);
-          })
-          .catch(error => {
-            console.error(error);
-          });
+          JSON.stringify({ 'videoname': vm.videoname }),
+          { headers: { 'Content-Type': 'application/json' }})
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
 
       }).catch(error => {
         console.error('Fehler beim Abspielen des Videos:', error);
       });
     },
+
 
     videoPlayed() {
       this.isPaused = false;
@@ -119,6 +137,7 @@ export default {
     pauseVideo() {
       this.$refs.video.pause();
       this.isPaused = true;
+      this.showMuteButton = false; 
     }
   },
   created() {
@@ -197,6 +216,25 @@ export default {
   }
 
   .play-button:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .mute-button {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    left: 50%;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    background-color:none;
+    -webkit-mask: url(~/static/icons/mute.png) no-repeat center;
+    mask: url(~/static/icons/mute.png) no-repeat center;
+    mask-size: cover;
+
+  }
+
+  .mute-button:hover {
     transform: translate(-50%, -50%) scale(1.1);
   }
   
@@ -427,6 +465,27 @@ export default {
       transform: translateX(0%);
       opacity: 1;
     }
+  }
+
+  .mute-button {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url(~/static/icons/mute.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .mute-button:hover {
+      transform: translate(-50%, -50%) scale(1.1);
   }
 
 
