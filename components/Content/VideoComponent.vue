@@ -349,7 +349,10 @@ export default {
       padding: 0;
       border-radius: 0px;
       background-color: white !important;
+      box-shadow: none;
     }
+
+    
 
 
     .project-content {

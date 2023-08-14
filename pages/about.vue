@@ -2,8 +2,14 @@
   <div id="desc-container">
       <div class="link-section">
         <nuxt-link to="/" class="about-btn">Home</nuxt-link>
-        <a class="about-btn" href="https://github.com/Nizii">GitHub</a>
-        <a class="about-btn" href="https://www.linkedin.com/in/nizam-%C3%B6zdemir-12a4b9264/">LinkedIn</a>
+        <a class="about-btn" href="https://github.com/Nizii">
+          GitHub        
+          <!--<img src="~/static/icons/arrowb.png"  class="ext-icon"/>-->
+        </a>
+        <a class="about-btn" href="https://www.linkedin.com/in/nizam-%C3%B6zdemir-12a4b9264/">
+          LinkedIn
+          <!--<img src="~/static/icons/arrowb.png"  class="ext-icon"/>-->
+        </a>        
       </div>
       <div class="about-section">
         <div class="about-text">
@@ -34,10 +40,22 @@
   </div>
 </template>
 
+<script>
+export default {
+  head: {
+    title: 'About',
+  },
+}
+</script>
 
 <style>
   *{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  .ext-icon{
+    width: 15px;
+    height: 15px;
   }
 
   .about-title-text{

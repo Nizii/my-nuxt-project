@@ -17,6 +17,7 @@ import BottomSection from '~/components/MainComponents/BottomSection.vue';
 import Spacer from '~/components/Content/Spacer.vue';
 
 export default {
+
   name: 'IndexPage',
   components: {
     HeaderSection,

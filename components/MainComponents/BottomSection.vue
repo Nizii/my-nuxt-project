@@ -48,7 +48,6 @@ export default {
 
   .to-header {
     font-size: 25px;
-    font-family: sans-serif;
     margin: 0 10px;
     text-decoration: none; 
     color: inherit;
@@ -114,7 +113,6 @@ export default {
   @media only screen and (max-width: 1024px) {
     .to-header {
       font-size: 25px;
-      font-family: sans-serif;
       margin: 0 10px;
       text-decoration: none; 
       color: inherit;
@@ -141,7 +139,6 @@ export default {
   @media only screen and (max-width: 600px) {
     .to-header {
       font-size: 25px;
-      font-family: sans-serif;
       margin: 0 10px;
       text-decoration: none; 
       color: inherit;
