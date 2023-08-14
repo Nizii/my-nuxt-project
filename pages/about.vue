@@ -23,7 +23,7 @@
             «Im Miteinander liegt Kraft, wo jede Frage ihren Raum hat». 
             Aus meiner Sicht können so dauerhaft gute Leistungen entstehen. 
             Diese Prinzipien scheinen sich mit denen Ihres Teams zu decken.
-          </p>    
+          </p>
           <p class="about-text-bottom">
           Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
           </p>
