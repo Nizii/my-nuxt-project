@@ -1,3 +1,3 @@
-Onlineausstellung für das Stadtmuseum Aarau während des Lockdowns.
-Unser Team bestand aus 2 Designern und 2 Informatikern (Frontend und Backend).
-Das Modul umfasste auch Gespräche mit dem Kunden sowie die Erfassung der Anforderungen.
+Während des Lockdowns realisierten wir eine Onlineausstellung für das Stadtmuseum Aarau.
+Unser Team setzte sich aus zwei Designern und zwei Informatikern (Frontend und Backend) zusammen.
+Im Rahmen dieses Moduls führten wir auch Kundengespräche durch und erfassten die Anforderungen.

@@ -1,6 +1,6 @@
-Im Rahmen eines Modul-Mentorats habe ich einen Bot erstellt, der mit Bitcoins handelt.
-Dabei wendet er zwei Strategien an den MAVG (Moving average) und den RSI (Relative Strength Index).
-Er ist am besten für den Hochfrequenzhandel im Sekunden- oder Minutenbereich geeignet.
-Dieses Projekt ist ein Einzelprojekt, das ich mit Python programmiert habe.
-Der Bot handelt über den Lykke- oder den Kraken-Broker, welche die REST-API oder gRPC zur Verfügung stellen.
-Der Bot läuft auf der Pythonanywhere Cloud.
+Im Rahmen eines Modul-Mentorings habe ich einen Bot entwickelt, der mit Bitcoins handelt.
+Er verwendet zwei Handelsstrategien: den MAVG (Moving Average) und den RSI (Relative Strength Index).
+Insbesondere ist er für den Hochfrequenzhandel im Sekunden- bis Minutenbereich optimiert.
+Dieses Projekt wurde von mir alleine realisiert und in Python programmiert.
+Der Bot führt Handel über die Broker Lykke und Kraken aus, die entweder die REST-API oder gRPC bereitstellen.
+Aktuell wird der Bot in der Cloud von Pythonanywhere betrieben.

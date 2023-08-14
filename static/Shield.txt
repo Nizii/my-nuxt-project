@@ -1,6 +1,11 @@
-Shield Hero ist ein VR-Spiel, bei dem man die Gegner mit Schildern besiegt. 
-Dabei können die Schilder wie Bumerangs geworfen werden oder die Geschosse der Gegner werden reflektiert. 
-Das Entwicklerteam bestand aus drei Informatikern. 
-Ich war u.a. für die Wurf- und Abwerbewegung der Schilder verantwortlich. 
-Die Welt ist aus Hexagonen aufgebaut und zeichnet sich durch ihre Einzigartigkeit aus, 
-da sie durch einen generativen Prozess erschaffen wird.
+
+Das VR-Spiel "Shield Hero" versetzt die Spieler in eine Welt, 
+in der sie ihre Gegner mit Schildern bekämpfen können. 
+Diese Schilder sind nicht nur zur Verteidigung da, 
+sondern können wie Bumerangs geworfen werden, 
+um Gegner direkt anzugreifen, oder sie können Geschosse der Gegner reflektieren. 
+Unser Entwicklerteam setzte sich aus drei Informatikern zusammen, 
+und meine Hauptverantwortung lag in der Implementierung der Wurf- und Abwerfbewegungen der Schilder. 
+Ein besonderes Merkmal des Spiels ist die aus Hexagonen bestehende Welt. 
+Sie ist nicht nur einzigartig in ihrem Design, sondern auch in ihrer Entstehung, 
+da sie durch einen generativen Prozess kreiert wird.

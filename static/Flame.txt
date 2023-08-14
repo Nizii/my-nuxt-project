@@ -1,3 +1,5 @@
-Eine Art Snake-Spiel in 2D bei dem sich der Ballon nicht verlängert. 
-Das Entwicklerteam bestand aus zwei Informatikern und einem Designer. 
-Ich war für die Gamelogik verantwortlich.
+Ein Geschicklichkeits- und Reaktionsspiel in 2D, 
+das an das klassische Snake-Spiel erinnert, 
+jedoch ohne dass sich der Ballon verlängert. 
+Das Entwicklerteam setzte sich aus zwei Informatikern und einem Designer zusammen. 
+Mein Verantwortungsbereich lag in der Gamelogik.

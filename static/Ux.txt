@@ -1,3 +1,8 @@
-Ein UX-Projekt über sexuelle Aufklärung für ein Institut aus dem Kanton Luzern.
-Der Fokus lag auf User Experience.
-Das Team bestand aus zwei Informatikern und einem Designer.
+
+Für ein Institut aus dem Kanton Luzern haben wir ein UX-Projekt 
+zum Thema sexuelle Aufklärung durchgeführt. 
+Dabei lag unser Hauptaugenmerk auf der User Experience, 
+um sicherzustellen, dass die Nutzer intuitiv und positiv mit den bereitgestellten 
+Informationen interagieren können. Unser interdisziplinäres Team setzte sich 
+aus zwei Informatikern und einem Designer zusammen. Ich hatte die Gelegenheit, 
+eng mit ihnen zusammenzuarbeiten und gemeinsam innovative Lösungen zu entwickeln.

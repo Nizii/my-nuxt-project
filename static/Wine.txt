@@ -1,6 +1,8 @@
-Eine interaktive Weinkarte für Personen, die weniger Weinkenntnisse haben, 
-und für Restaurants, die sich keinen Sommelier leisten können, 
-aber dennoch ein Weinerlebnis anbieten möchten. Das Team bestand aus mir und einem Designer. 
-Die Berechnung der Übereinstimmung zwischen dem Geschmacksprofil des Nutzers und 
-dem des Weins wurde mit der Formel der euklidischen Distanz durchgeführt. 
-(Audio Tino Freiburghaus)
+Wir haben eine interaktive Weinkarte entwickelt, 
+die speziell für Personen konzipiert ist, die nicht tief in die Welt des Weins eingetaucht sind. 
+Sie ist auch für Restaurants gedacht, die sich zwar keinen Sommelier leisten können, 
+aber ihren Gästen dennoch ein besonderes Weinerlebnis bieten möchten. 
+Gemeinsam mit einem Designer habe ich diese Weinkarte entwickelt. 
+Ein besonderes Feature dabei ist die Berechnung der Übereinstimmung zwischen dem Geschmacksprofil 
+des Nutzers und dem des Weins. 
+Dies erfolgt mithilfe der Formel der euklidischen Distanz. (Audio von Tino Freiburghaus)

@@ -1,5 +1,8 @@
-Supersonic ist ein Rennspiel, bei dem sich zwei Spieler duellieren. 
-Einerseits steuert ein Spieler das Raumschiff und andererseits ist der Streckenbauer, 
-der versucht, das Raumschiff durch Kurven zu zerstören. 
-Das Entwicklerteam bestand aus 3 Informatikern und einem Designer. 
-Ich war für die Physik verantwortlich.
+"Supersonic Bridge Racer" ist ein dynamisches Rennspiel, 
+in dem zwei Spieler in einem intensiven Duell gegeneinander antreten. 
+Während ein Spieler das Raumschiff steuert und versucht zu überleben, 
+nimmt der andere die Rolle des Streckenbauers ein. 
+Dieser hat die Aufgabe, den Parcours so zu gestalten, 
+dass er das Raumschiff durch tückische Kurven und Hindernisse zu Fall bringt. 
+Hinter dem Spiel steht ein Entwicklerteam aus zwei Informatikern und einem Designer. 
+Meine Aufgabe in diesem Projekt war es, die Physik des Spiels zu entwickeln und zu implementieren.

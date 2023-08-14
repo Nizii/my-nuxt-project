@@ -1,6 +1,7 @@
-Im Rahmen eines Modul-Mentorats habe ich eine erste Version eines ERP-Systems 
-für einen Einmann-Sanitärbetrieb erstellt. Der Umfang dieses Moduls umfasste 
-die Erfassung der Anforderungen (Requirements), Service-Level-Agreements, 
-einen Prototypen und die Implementierung einer ersten funktionalen Version. 
-Das System (Version 2) befindet sich noch in der Entwicklung. Es war eine einzelarbeit.
-
+Während eines Modul-Mentorats entwickelte ich die erste Version eines ERP-Systems 
+für einen Einmann-Sanitärbetrieb.
+Innerhalb dieses Moduls waren die Erfassung der Anforderungen, 
+das Festlegen von Service-Level-Agreements, 
+das Erstellen eines Prototypen sowie die Implementierung einer funktionsfähigen Erstversion enthalten.
+Aktuell befindet sich die zweite Version des Systems noch in Entwicklung. 
+Das gesamte Projekt wurde von mir als Einzelarbeit durchgeführt.
