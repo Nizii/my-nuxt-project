@@ -13,7 +13,7 @@
           <p>
             Mein Name ist Nizam Özdemir, und ich bin 35 Jahre alt.
             Mit dem erfolgreichen Absolvieren meines Studiums bin ich meinem Traumberuf als Softwareentwickler ein Stück näher gekommen.
-            Programmieren habe ich vor dem Studium in privaten Projekten gelernt und möchte dies nun auch beruflich tun.
+            Programmieren habe ich vor dem Studium in privaten Projekten gelernt und möchte dies nun auch beruflich tun. 
             Während meines Studiums habe ich an einer Reihe von Projekten teilgenommen, von denen Sie einige auf meiner Webseite finden. 
             In meiner Freizeit bin ich leidenschaftlicher Fußballspieler im Verein und koche sehr gerne.
           </p>    
@@ -22,7 +22,6 @@
             In meinen Berufsjahren und auch in anderen Bereichen meines privaten Lebens habe ich stets das Motto vertreten: 
             «Im Miteinander liegt Kraft, wo jede Frage ihren Raum hat». 
             Aus meiner Sicht können so dauerhaft gute Leistungen entstehen. 
-            Diese Prinzipien scheinen sich mit denen Ihres Teams zu decken.
           </p>
           <p class="about-text-bottom">
           Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
