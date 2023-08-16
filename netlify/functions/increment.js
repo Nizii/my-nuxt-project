@@ -13,9 +13,16 @@ exports.handler = async function(event, context) {
     console.log("Collection "+collection);
     const videoname = JSON.parse(event.body).videoname;
     console.log("Videoname " + videoname);
+
+    const currentTime = new Date();
+
     const videoEntry = await collection.findOneAndUpdate(
       { name: videoname },
-      { $inc: { count: 1 }, $setOnInsert: { name: videoname } },
+      { 
+        $inc: { count: 1 }, 
+        $setOnInsert: { name: videoname },
+        $set: { lastUpdated: currentTime } 
+      },
       { upsert: true, returnOriginal: false }
     );
     console.log("VideoEntry " + videoEntry);
