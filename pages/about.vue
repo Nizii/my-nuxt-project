@@ -17,17 +17,18 @@
             Über mich
           </p>
           <p>
-            Mein Name ist Nizam Özdemir, und ich bin 35 Jahre alt.
-            Mit dem erfolgreichen Absolvieren meines Studiums bin ich meinem Traumberuf als Softwareentwickler ein Stück näher gekommen.
-            Programmieren habe ich vor dem Studium in privaten Projekten gelernt und möchte dies nun auch beruflich tun. 
-            Während meines Studiums habe ich an einer Reihe von Projekten teilgenommen, von denen Sie einige auf meiner Webseite finden. 
-            In meiner Freizeit bin ich leidenschaftlicher Fußballspieler im Verein und koche sehr gerne.
+            Ich habe mein Informatik Studium an der Hochschule Luzern mit Fokus Digitalideation erfolgreich abgeschlossen, wo ich an einer Vielzahl von Projekten gearbeitet habe, die meine Fähigkeiten in Softwareentwicklung und Lösungsarchitektur weiterentwickelten. 
+            Während meiner Zeit an der HSLU konnte ich praxisnah und interdisziplinär an modernen Technologien arbeiten, was mir ein starkes Fundament im Bereich Softwareentwicklung verschaffte.
+            Aktuell arbeite ich als Power Platform Spezialist und Softwareentwickler bei der Cybersystems GmbH. 
+            In meiner Rolle entwickle ich Lösungen auf Basis der Microsoft Power Platform sowie .NET und unterstütze Unternehmen dabei, ihre Geschäftsprozesse effizienter und digitaler zu gestalten. 
+            Meine Expertise umfasst die Arbeit mit Microsoft PowerApps, Power Automate, Dataverse, sowie weiteren Tools aus dem Microsoft-Ökosystem.
           </p>    
           <p>
             Das Wichtigste für mich bei der Arbeit ist ein respektvoller und teamorientierter Umgang miteinander. 
             In meinen Berufsjahren und auch in anderen Bereichen meines privaten Lebens habe ich stets das Motto vertreten: 
             «Im Miteinander liegt Kraft, wo jede Frage ihren Raum hat». 
             Aus meiner Sicht können so dauerhaft gute Leistungen entstehen. 
+            In meiner Freizeit bin ich leidenschaftlicher Fussballspieler im Verein und koche sehr gerne.
           </p>
           <p class="about-text-bottom">
           Habe ich Ihr Interesse geweckt? Dann kontaktieren Sie mich auf nizam.oezdemir@gmx.ch oder auf LinkedIn.
